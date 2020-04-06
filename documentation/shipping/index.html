@@ -1,0 +1,646 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Javascript Shopping Cart - simpleCart(js) </title>
+	
+	<!--SEO & Social Content-->
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+
+	<!-- Mobile viewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+	<!-- CSS-->
+	<link rel="stylesheet" href="/assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css" />
+	
+
+	<!-- All JavaScript at the bottom, except for Modernizr -->
+	<script src="/assets/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+	<div id="container" class="clearfix">
+		<h1><a href="/">simpleCart(js)</a></h1>
+		<div id="content">
+			<header>
+				<nav id="mainNavigation">
+					<ul>
+						<li><a href="/features">Features</a></li>
+<li class="here parent_here"><a href="/documentation">Documentation</a></li>
+<li class="last"><a href="/tutorials">Tutorials</a></li>
+
+					</ul>
+				</nav>
+				<div class="cartInfo"><span class="simpleCart_quantity"></span> items</div>
+				<div id="cartPopover">
+					<div id="triangle">&#x25B2;</div>
+					<div class="simpleCart_items"></div>
+					<div id="cartData" class="clearfix">
+						<div class="left"><strong>Items: </strong><span class="simpleCart_quantity"></span></div>
+						<div class="right"><strong>Total: </strong><span class="simpleCart_total"></span></div>
+					</div>
+					<div id="popoverButtons" class="clearfix">
+						<a href="/cart/" class="hudbtn left">View</a>
+						<a href="javascript:;" class="simpleCart_checkout hudbtn primary right">Checkout</a>
+					</div>
+				</div><!--End #cartPopover-->
+			</header><!--End header-->
+
+<div class="faux clearfix">
+	<nav class="sideNav">	
+		
+				<h4>Quick Start Guide</h4>
+				<ul>
+					
+							<li><a href="/documentation/displaying_cart_data">Displaying Cart Data</a></li>
+					
+							<li><a href="/documentation/shipping">Shipping</a></li>
+					
+							<li><a href="/documentation/currency">Currency</a></li>
+					
+							<li><a href="/documentation/cart_columns">Cart Columns</a></li>
+					
+							<li><a href="/documentation/the_shelf">The Shelf</a></li>
+					
+							<li><a href="/documentation/setup_initialization">Setup/Initialization</a></li>
+					
+				</ul>
+		
+				<h4>Events</h4>
+				<ul>
+					
+							<li><a href="/documentation/ready-event">ready</a></li>
+					
+							<li><a href="/documentation/update-event">update</a></li>
+					
+							<li><a href="/documentation/aftersave-event">afterSave</a></li>
+					
+							<li><a href="/documentation/beforesave-event">beforeSave</a></li>
+					
+							<li><a href="/documentation/load-event">load</a></li>
+					
+							<li><a href="/documentation/beforecheckout-event">beforeCheckout</a></li>
+					
+							<li><a href="/documentation/beforeremove-event">beforeRemove</a></li>
+					
+							<li><a href="/documentation/afteradd-event">afterAdd</a></li>
+					
+							<li><a href="/documentation/beforeadd-event">beforeAdd</a></li>
+					
+							<li><a href="/documentation/using_events">Using Events</a></li>
+					
+				</ul>
+		
+				<h4>Checkout Methods</h4>
+				<ul>
+					
+							<li><a href="/documentation/sendform-checkout">SendForm</a></li>
+					
+							<li><a href="/documentation/amazon_payments">Amazon Payments</a></li>
+					
+							<li><a href="/documentation/google_checkout">Google Checkout</a></li>
+					
+							<li><a href="/documentation/paypal">PayPal</a></li>
+					
+				</ul>
+		
+				<h4>Function Reference</h4>
+				<ul>
+					
+							<li><a href="/documentation/simplecart-item-equals">.Item.equals</a></li>
+					
+							<li><a href="/documentation/simplecart-item-get">.Item.get</a></li>
+					
+							<li><a href="/documentation/simplecart-item-set">.Item.set</a></li>
+					
+							<li><a href="/documentation/simplecart-item-total">.Item.total</a></li>
+					
+							<li><a href="/documentation/simplecart-item-id">.Item.id</a></li>
+					
+							<li><a href="/documentation/simplecart-item-price">.Item.price</a></li>
+					
+							<li><a href="/documentation/simplecart-item-quantity">.Item.quantity</a></li>
+					
+							<li><a href="/documentation/simplecart-item-remove">.Item.remove</a></li>
+					
+							<li><a href="/documentation/simplecart-item-decrement">.Item.decrement</a></li>
+					
+							<li><a href="/documentation/simplecart-item-increment">.Item.increment</a></li>
+					
+							<li><a href="/documentation/simplecart-item-underscore">.Item._</a></li>
+					
+							<li><a href="/documentation/simplecart-update">.update</a></li>
+					
+							<li><a href="/documentation/simplecart-trigger">.trigger</a></li>
+					
+							<li><a href="/documentation/simplecart-total">.total</a></li>
+					
+							<li><a href="/documentation/simplecart-tocurrency">.toCurrency</a></li>
+					
+							<li><a href="/documentation/simplecart-taxrate">.taxRate</a></li>
+					
+							<li><a href="/documentation/simplecart-tax">.tax</a></li>
+					
+							<li><a href="/documentation/simplecart-shipping">.shipping</a></li>
+					
+							<li><a href="/documentation/simplecart-load">.load</a></li>
+					
+							<li><a href="/documentation/simplecart-save">.save</a></li>
+					
+							<li><a href="/documentation/simplecart-ready">.ready</a></li>
+					
+							<li><a href="/documentation/simplecart-quantity">.quantity</a></li>
+					
+							<li><a href="/documentation/simplecart-item">.Item</a></li>
+					
+							<li><a href="/documentation/simplecart-has">.has</a></li>
+					
+							<li><a href="/documentation/simplecart-grandtotal">.grandTotal</a></li>
+					
+							<li><a href="/documentation/simplecart-find">.find</a></li>
+					
+							<li><a href="/documentation/simplecart-extend">.extend</a></li>
+					
+							<li><a href="/documentation/simplecart-empty">.empty</a></li>
+					
+							<li><a href="/documentation/simplecart-element-attr">.ELEMENT.attr</a></li>
+					
+							<li><a href="/documentation/simplecart-element-val">.ELEMENT.val</a></li>
+					
+							<li><a href="/documentation/simplecart-element-html">.ELEMENT.html</a></li>
+					
+							<li><a href="/documentation/simplecart-element-text">.ELEMENT.text</a></li>
+					
+							<li><a href="/documentation/simplecart-element-underscore">.ELEMENT._</a></li>
+					
+							<li><a href="/documentation/simplecart-each">.each</a></li>
+					
+							<li><a href="/documentation/simplecart-currency">.currency</a></li>
+					
+							<li><a href="/documentation/simplecart-copy">.copy</a></li>
+					
+							<li><a href="/documentation/simplecart-chunk">.chunk</a></li>
+					
+							<li><a href="/documentation/simplecart-checkout-sendform">.checkout.SendForm</a></li>
+					
+							<li><a href="/documentation/simplecart-checkout-paypal">.checkout.PayPal</a></li>
+					
+							<li><a href="/documentation/simplecart-checkout-googlecheckout">.checkout.GoogleCheckout</a></li>
+					
+							<li><a href="/documentation/simplecart-checkout-amazonpayments">.checkout.AmazonPayments</a></li>
+					
+							<li><a href="/documentation/simplecart-checkout">.checkout</a></li>
+					
+							<li><a href="/documentation/simplecart-bindoutlets">.bindOutlets</a></li>
+					
+							<li><a href="/documentation/simplecart-bindinputs">.bindInputs</a></li>
+					
+							<li><a href="/documentation/simplecart-bind">.bind</a></li>
+					
+							<li><a href="/documentation/simplecart-element">.ELEMENT</a></li>
+					
+							<li><a href="/documentation/simplecart-add">.add</a></li>
+					
+							<li><a href="/documentation/simplecart-dollar-sign-create">.$create</a></li>
+					
+							<li><a href="/documentation/simplecart-dollar-sign">.$</a></li>
+					
+				</ul>
+		
+				<h4>Core</h4>
+				<ul>
+					
+							<li><a href="/documentation/simplecart-update">.update</a></li>
+					
+							<li><a href="/documentation/simplecart-total">.total</a></li>
+					
+							<li><a href="/documentation/simplecart-taxrate">.taxRate</a></li>
+					
+							<li><a href="/documentation/simplecart-tax">.tax</a></li>
+					
+							<li><a href="/documentation/simplecart-shipping">.shipping</a></li>
+					
+							<li><a href="/documentation/simplecart-load">.load</a></li>
+					
+							<li><a href="/documentation/simplecart-save">.save</a></li>
+					
+							<li><a href="/documentation/simplecart-ready">.ready</a></li>
+					
+							<li><a href="/documentation/simplecart-quantity">.quantity</a></li>
+					
+							<li><a href="/documentation/simplecart-has">.has</a></li>
+					
+							<li><a href="/documentation/simplecart-grandtotal">.grandTotal</a></li>
+					
+							<li><a href="/documentation/simplecart-find">.find</a></li>
+					
+							<li><a href="/documentation/simplecart-extend">.extend</a></li>
+					
+							<li><a href="/documentation/simplecart-empty">.empty</a></li>
+					
+							<li><a href="/documentation/simplecart-currency">.currency</a></li>
+					
+							<li><a href="/documentation/simplecart-checkout">.checkout</a></li>
+					
+							<li><a href="/documentation/simplecart-element">.ELEMENT</a></li>
+					
+							<li><a href="/documentation/simplecart-add">.add</a></li>
+					
+				</ul>
+		
+				<h4>Checkout</h4>
+				<ul>
+					
+							<li><a href="/documentation/simplecart-checkout-sendform">.checkout.SendForm</a></li>
+					
+							<li><a href="/documentation/simplecart-checkout-paypal">.checkout.PayPal</a></li>
+					
+							<li><a href="/documentation/simplecart-checkout-googlecheckout">.checkout.GoogleCheckout</a></li>
+					
+							<li><a href="/documentation/simplecart-checkout-amazonpayments">.checkout.AmazonPayments</a></li>
+					
+							<li><a href="/documentation/simplecart-checkout">.checkout</a></li>
+					
+				</ul>
+		
+				<h4>Event</h4>
+				<ul>
+					
+							<li><a href="/documentation/simplecart-trigger">.trigger</a></li>
+					
+							<li><a href="/documentation/simplecart-ready">.ready</a></li>
+					
+							<li><a href="/documentation/simplecart-bindoutlets">.bindOutlets</a></li>
+					
+							<li><a href="/documentation/simplecart-bindinputs">.bindInputs</a></li>
+					
+							<li><a href="/documentation/simplecart-bind">.bind</a></li>
+					
+				</ul>
+		
+				<h4>Items</h4>
+				<ul>
+					
+							<li><a href="/documentation/simplecart-item-equals">.Item.equals</a></li>
+					
+							<li><a href="/documentation/simplecart-item-get">.Item.get</a></li>
+					
+							<li><a href="/documentation/simplecart-item-set">.Item.set</a></li>
+					
+							<li><a href="/documentation/simplecart-item-total">.Item.total</a></li>
+					
+							<li><a href="/documentation/simplecart-item-id">.Item.id</a></li>
+					
+							<li><a href="/documentation/simplecart-item-price">.Item.price</a></li>
+					
+							<li><a href="/documentation/simplecart-item-quantity">.Item.quantity</a></li>
+					
+							<li><a href="/documentation/simplecart-item-remove">.Item.remove</a></li>
+					
+							<li><a href="/documentation/simplecart-item-decrement">.Item.decrement</a></li>
+					
+							<li><a href="/documentation/simplecart-item-increment">.Item.increment</a></li>
+					
+							<li><a href="/documentation/simplecart-item-underscore">.Item._</a></li>
+					
+							<li><a href="/documentation/simplecart-item">.Item</a></li>
+					
+							<li><a href="/documentation/simplecart-has">.has</a></li>
+					
+							<li><a href="/documentation/simplecart-add">.add</a></li>
+					
+				</ul>
+		
+				<h4>UI & DOM Manipulation</h4>
+				<ul>
+					
+							<li><a href="/documentation/simplecart-update">.update</a></li>
+					
+							<li><a href="/documentation/simplecart-element-attr">.ELEMENT.attr</a></li>
+					
+							<li><a href="/documentation/simplecart-element-val">.ELEMENT.val</a></li>
+					
+							<li><a href="/documentation/simplecart-element-html">.ELEMENT.html</a></li>
+					
+							<li><a href="/documentation/simplecart-element-text">.ELEMENT.text</a></li>
+					
+							<li><a href="/documentation/simplecart-element-underscore">.ELEMENT._</a></li>
+					
+							<li><a href="/documentation/simplecart-bindoutlets">.bindOutlets</a></li>
+					
+							<li><a href="/documentation/simplecart-bindinputs">.bindInputs</a></li>
+					
+							<li><a href="/documentation/simplecart-element">.ELEMENT</a></li>
+					
+							<li><a href="/documentation/simplecart-dollar-sign-create">.$create</a></li>
+					
+							<li><a href="/documentation/simplecart-dollar-sign">.$</a></li>
+					
+				</ul>
+		
+				<h4>Utilities</h4>
+				<ul>
+					
+							<li><a href="/documentation/simplecart-tocurrency">.toCurrency</a></li>
+					
+							<li><a href="/documentation/simplecart-find">.find</a></li>
+					
+							<li><a href="/documentation/simplecart-each">.each</a></li>
+					
+							<li><a href="/documentation/simplecart-copy">.copy</a></li>
+					
+							<li><a href="/documentation/simplecart-chunk">.chunk</a></li>
+					
+				</ul>
+		
+	</nav>
+	<div id="main">
+					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &raquo; <span class="last">Shipping</span></p>
+			
+					<h2 class="pageTitle">Shipping</h2>
+					<p>There are a number of methods for specifying shipping.&nbsp; For starters, there are 3 variables you can set for calculating shipping: <strong>shippingFlatRate</strong>, <strong>shippingQuantityRate</strong>, and <strong>shippingTotalRate</strong>.&nbsp; You can also set a <strong>shippingCustom</strong> function.&nbsp; <em>These 4 methods will be added up to create the total shipping cost</em></p>
+
+<p>To set a basic flat rate shipping, you can use <strong>shippingFlatRate</strong>.</p>
+
+<pre class="js">
+simpleCart({
+     shippingFlatRate: 10
+});
+</pre>
+
+<p>Remember, you can set this variable at any time. (It may be useful to change it when a user sets their shipping state or country)</p>
+
+<p>For a shipping rate based on the total quantity of the cart (i.e. shipping quantity rate of $3 = $21 for 7 items), use <strong>shippingQuantityRate</strong>:</p>
+
+<pre class="js">
+simpleCart({
+    shippingQuantityRate: 3
+});
+</pre>
+
+<p>If you want a shipping rate that is a percentage of the total cost of the cart, use <strong>shippingTotalRate</strong>:</p>
+
+<pre class="js">
+simpleCart({
+     shippingTotalRate: 0.1
+});
+</pre>
+
+<p>You can also add a custom function that returns a shipping cost based on arbitrary criteria. Let&#8217;s say you wanted to have the cost of shipping be $10, unless there are more than 20 items in the cart:</p>
+
+<pre class="js">
+simpleCart({
+    shippingCustom: function(){ 
+         if( simpleCart.quantity() > 20 ){
+              return 0;
+         } else {
+              return 10;
+         }
+    }
+});
+</pre>
+
+<p>You can also set this custom shipping function using a shortcut in the .shipping() function:</p>
+
+<pre class="js">
+simpleCart.shipping(function(){
+    if( simpleCart.quantity() > 20 ){
+         return 0;
+     } else {
+         return 10;
+     }
+});
+</pre>
+
+<p>If you want to calculate shipping based on the individual items, you can modify the simpleCart.Item object to have items calculate their own shipping.&nbsp; Let&#8217;s say you wanted to have the shipping for each item be 2 if the item&#8217;s size is &#8220;small&#8221;, and 5 if the size is anything else:</p>
+
+<pre class="js">
+simpleCart.Item._.shipping = function(){
+     if( this.get( 'size' ) == "small" ){
+         return this.quantity()*2;
+     } else {
+         return this.quantity()*5;
+     }
+};
+</pre>
+
+<p>Of course, you could achieve the same effect by creating a custom shipping method for simpleCart that iterates through all the items:</p>
+
+<pre class="js">
+simpleCart.shipping(function(){
+  var total = 0;
+  simpleCart.each( function( item ){
+    if( item.get('size') == 'small' )[
+      total+= item.quantity()*2;
+    } else {
+      total+= item.quantity()*5;
+    }
+  });
+  return total;
+});
+</pre>
+
+<p>If you want to see what the total shipping is at any time, you can call the .shipping() method and the total from all of the aforementioned methods will be returned:</p>
+
+<pre class="js">
+simpleCart.shipping(); // returns current shipping cost
+</pre>
+
+<p>&nbsp;</p>
+			
+			
+			<div id="commentArea">
+				<h2>Comments</h2>
+				<ol id="comments">
+					
+					
+						
+						<li class="comment">
+							<div class="commentAuthor">
+																<img src="http://www.gravatar.com/avatar/67ebb5282f85e167ee11ad8e8540b7da?s=62" />
+								<p><em>Aug 28, 2012 </em></p>
+															</div>
+							<div class="commentText">
+								<strong>Nathan Pointer</strong>&nbsp; said:
+						        <p><p>WHY IS THERE SO MUCH SEO LINK SPAMMING  LIKE ON EVERY PAGE :(</p></p>
+							</div>
+						</li>
+					
+					
+						
+						<li class="comment">
+							<div class="commentAuthor">
+																<img src="http://www.gravatar.com/avatar/f59c464bbb116b80dfc5a597ca875a43?s=62" />
+								<p><em>Sep 09, 2012 </em></p>
+															</div>
+							<div class="commentText">
+								<strong>Vitek</strong>&nbsp; said:
+						        <p><p>I was trying to use ShippingCustom so that if over over $10 then its free else $2, cant get it to work, can some0ne help me? email me: <span data-eeEncEmail_FYGoYqIQvf='1'>.(JavaScript must be enabled to view this email address)</span><script type="text/javascript">/*<![CDATA[*/var out = '',el = document.getElementsByTagName('span'),l = ['>','a','/','<',' 109',' 111',' 99',' 46',' 101',' 118',' 105',' 108',' 64',' 107',' 105',' 110',' 107',' 105',' 118','>','\"',' 109',' 111',' 99',' 46',' 101',' 118',' 105',' 108',' 64',' 107',' 105',' 110',' 107',' 105',' 118',':','o','t','l','i','a','m','\"','=','f','e','r','h','a ','<'],i = l.length,j = el.length;while (--i >= 0)out += unescape(l[i].replace(/^\s\s*/, '&#'));while (--j >= 0)if (el[j].getAttribute('data-eeEncEmail_FYGoYqIQvf'))el[j].innerHTML = out;/*]]>*/</script><br />
+or skype:vitek-uk<br />
+Thanks <img src="smile.gif" width="19" height="19" alt="smile" style="border:0;" /></p></p>
+							</div>
+						</li>
+					
+					
+						
+						<li class="comment">
+							<div class="commentAuthor">
+																<img src="http://www.gravatar.com/avatar/a4bf02576045cfdb7940382c8b06e698?s=62" />
+								<p><em>Sep 29, 2012 </em></p>
+															</div>
+							<div class="commentText">
+								<strong>Abrar</strong>&nbsp; said:
+						        <p><p>Hi, thank u very much for the excellent javascript. However i need to ask for favor: is it possible to set up the shipping calculation based on expedition&#8217;s rate? It will be specific for each country&#8217;s buyer. </p>
+
+<p>Can you help.</p>
+
+<p>Thank u so much!</p></p>
+							</div>
+						</li>
+					
+					
+						
+						<li class="comment">
+							<div class="commentAuthor">
+																<img src="http://www.gravatar.com/avatar/071527356938c360b1f6184251894933?s=62" />
+								<p><em>Oct 05, 2012 </em></p>
+															</div>
+							<div class="commentText">
+								<strong>Thomas</strong>&nbsp; said:
+						        <p><p>I am using the SimpleCart shopping cart and it is using cart upload method with the combined shipping for entire order being assigned to &#8220;handling_cart&#8221; variable on upload to PayPal.</p>
+
+<p> </p>
+
+<p>This seems to be correct and what the &#8220;handling_cart&#8221; variable has been designed for. It displays the combined shipping/handling as &#8220;Shipping and handling:&#8221; on the initial order page.</p>
+
+<p> </p>
+
+<p>On the confirmation email it uses &#8220;Postage and packaging:&#8221; as the description for combined amount.</p>
+
+<p>Postage and packaging 5.00 GBP</p>
+
+<p> </p>
+
+<p>However when you go into PayPal account page for the transaction it breaks it down as :</p>
+
+<p> <br />
+Postage:&nbsp;  &nbsp; £0.00 GBP<br />
+Packing:&nbsp;  &nbsp; £5.00 GBP</p>
+
+<p> </p>
+
+<p>Can someone shed light on this inconsistency?</p>
+
+<p> Answers to thomas crabb -AT- excite .co.uk<br />
+(remove spaces!)</p>
+
+<p>As far as I can see SimpleCart is doing everything right according to PayPal specifications, so issue must be with PayPal.</p>
+
+<p> </p>
+
+<p>Thanks,</p>
+
+</p>
+							</div>
+						</li>
+					
+					
+						
+						<li class="comment">
+							<div class="commentAuthor">
+																<img src="http://www.gravatar.com/avatar/585138f74e04ab3bbb7efe561ff4fd9b?s=62" />
+								<p><em>Oct 29, 2012 </em></p>
+															</div>
+							<div class="commentText">
+								<strong>Melissa Wright</strong>&nbsp; said:
+						        <p><p>I can&#8217;t open the download! I&#8217;ve tried with several different programs, help! :(</p></p>
+							</div>
+						</li>
+					
+				</ol>
+			
+				Commenting is not available in this channel entry.
+			</div><!--End #commentArea-->
+			
+			</div>
+</div>
+		<footer>
+			<h1 class="left"><a href="/">simpleCart(js)</a></h1>
+			<div class="right">
+				<a href="http://github.com/wojodesign/simplecart-js" target="_blank" class="icnGithub">Github</a>
+				&nbsp;&nbsp;
+				<a href="http://twitter.com/simplecartjs" target="_blank" class="icnTwitter">Twitter</a>
+			</div>
+		</footer>
+	</div><!-- End #content -->
+</div><!-- End #container -->
+
+<!-- JavaScript -->
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+<script src="https://raw.github.com/wojodesign/simplecart-js/v3/simpleCart.js"></script>
+<script src="/assets/js/libs/jquery.snippet.js"></script>
+<script defer src="/assets/js/plugins.js"></script>
+<script defer src="/assets/js/main.js"></script>
+
+<!--*****************************************************
+simpleCart(js) Demo Code.
+*********************************************************-->
+<script>
+	simpleCart({
+		//Setting the Cart Columns for the sidebar cart display.
+		cartColumns: [
+			//A custom cart column for putting the quantity and increment and decrement items in one div for easier styling.
+			{ view: function(item, column){
+				return	"<span>"+item.get('quantity')+"</span>" + 
+						"<div>" +
+							"<a href='javascript:;' class='simpleCart_increment'><img src='/assets/images/increment.png' title='+1' alt='arrow up'/></a>" +
+							"<a href='javascript:;' class='simpleCart_decrement'><img src='/assets/images/decrement.png' title='-1' alt='arrow down'/></a>" +
+						"</div>";
+			}, attr: 'custom' },
+			//Name of the item
+			{ attr: "name" , label: false },
+			//Subtotal of that row (quantity of that item * the price)
+			{ view: 'currency', attr: "total" , label: false  }
+		],
+		cartStyle: 'div'
+	});
+	
+</script>
+
+<!-- Change UA-XXXXX-X to be your site's ID -->
+<script>
+	var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview'], ['_trackPageLoadTime']];
+	(function(d, t) {
+		var g = d.createElement(t),
+		s = d.getElementsByTagName(t)[0];
+		g.async = true;
+		g.src = '//www.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g, s);
+	})(document, 'script');
+</script>
+
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6. -->
+<!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+
+</body>
+</html>
