@@ -1,31 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
+<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+	<meta charset="utf-8">
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Javascript Shopping Cart - simpleCart(js) </title>
 	
 	<!--SEO & Social Content-->
-	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<meta property="og:title" content>
+	<meta property="og:description" content>
+	<meta property="og:image" content>
+	<meta name="description" content>
+	<meta name="author" content>
 
 	<!-- Mobile viewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- CSS-->
-	<link rel="stylesheet" href="/assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css" />
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css">
 	
 
 	<!-- All JavaScript at the bottom, except for Modernizr -->
@@ -325,7 +320,7 @@
 					
 				</ul>
 		
-				<h4>UI & DOM Manipulation</h4>
+				<h4>UI &amp; DOM Manipulation</h4>
 				<ul>
 					
 							<li><a href="/documentation/simplecart-update">.update</a></li>
@@ -369,7 +364,7 @@
 		
 	</nav>
 	<div id="main">
-					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &raquo; <span class="last">.find</span></p>
+					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &#xBB; <span class="last">.find</span></p>
 			
 					<h2 class="pageTitle">simpleCart.find( [ params ] )</h2>
 					<div class="signatures">
@@ -381,25 +376,23 @@
 
 <p>You can get an item simply by sending an ID:</p>
 
-<pre class="js">
-  simpleCart.find( "SCI-11" ); // returns the item with id of SCI-11, if it is in the cart
+<pre class="js">  simpleCart.find( &quot;SCI-11&quot; ); // returns the item with id of SCI-11, if it is in the cart
 
 </pre>
 
 <p>You can search for items in the cart by matching one or more fields in the object, or by using inequality searches:</p>
 
 <pre class="js">
-
-var bob = simpleCart.add({name: "bob" , price: 2 , color:'blue' , size: 6 }),
-  joe = simpleCart.add({name: "joe" , price: 3 , color:'orange' , size: 3 }),
-  jeff = simpleCart.add({name: "jeff" , price: 4 , color:'blue' , size: 4 }),
-  bill = simpleCart.add({name: "bill" , price: 5 , color:'red' , size: 5 });
+var bob = simpleCart.add({name: &quot;bob&quot; , price: 2 , color:&apos;blue&apos; , size: 6 }),
+  joe = simpleCart.add({name: &quot;joe&quot; , price: 3 , color:&apos;orange&apos; , size: 3 }),
+  jeff = simpleCart.add({name: &quot;jeff&quot; , price: 4 , color:&apos;blue&apos; , size: 4 }),
+  bill = simpleCart.add({name: &quot;bill&quot; , price: 5 , color:&apos;red&apos; , size: 5 });
 		 
-console.log( simpleCart.find({ color: 'orange' }) ); // [ joe ]
-console.log( simpleCart.find({ price: '>=4' }) ); // [ jeff , bill ]
-console.log( simpleCart.find({ size: '<5' }) ); // [ bob , joe , jeff ]
-console.log( simpleCart.find({ name: "bob" }) );  // [ bob ]
-console.log( simpleCart.find({ color: 'blue', size: '<4' }) );  // [ bob ] 
+console.log( simpleCart.find({ color: &apos;orange&apos; }) ); // [ joe ]
+console.log( simpleCart.find({ price: &apos;&gt;=4&apos; }) ); // [ jeff , bill ]
+console.log( simpleCart.find({ size: &apos;&lt;5&apos; }) ); // [ bob , joe , jeff ]
+console.log( simpleCart.find({ name: &quot;bob&quot; }) );  // [ bob ]
+console.log( simpleCart.find({ color: &apos;blue&apos;, size: &apos;&lt;4&apos; }) );  // [ bob ] 
 			
 			
 </pre>
@@ -420,7 +413,7 @@ console.log( simpleCart.find({ color: 'blue', size: '<4' }) );  // [ bob ]
 			<h1 class="left"><a href="/">simpleCart(js)</a></h1>
 			<div class="right">
 				<a href="http://github.com/wojodesign/simplecart-js" target="_blank" class="icnGithub">Github</a>
-				&nbsp;&nbsp;
+				&#xA0;&#xA0;
 				<a href="http://twitter.com/simplecartjs" target="_blank" class="icnTwitter">Twitter</a>
 			</div>
 		</footer>
@@ -480,5 +473,5 @@ simpleCart(js) Demo Code.
   <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 <![endif]-->
 
-</body>
-</html>
+
+</body></html>

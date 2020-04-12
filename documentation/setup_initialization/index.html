@@ -1,31 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
+<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+	<meta charset="utf-8">
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Javascript Shopping Cart - simpleCart(js) </title>
 	
 	<!--SEO & Social Content-->
-	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<meta property="og:title" content>
+	<meta property="og:description" content>
+	<meta property="og:image" content>
+	<meta name="description" content>
+	<meta name="author" content>
 
 	<!-- Mobile viewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- CSS-->
-	<link rel="stylesheet" href="/assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css" />
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css">
 	
 
 	<!-- All JavaScript at the bottom, except for Modernizr -->
@@ -325,7 +320,7 @@
 					
 				</ul>
 		
-				<h4>UI & DOM Manipulation</h4>
+				<h4>UI &amp; DOM Manipulation</h4>
 				<ul>
 					
 							<li><a href="/documentation/simplecart-update">.update</a></li>
@@ -369,7 +364,7 @@
 		
 	</nav>
 	<div id="main">
-					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &raquo; <span class="last">Setup/Initialization</span></p>
+					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &#xBB; <span class="last">Setup/Initialization</span></p>
 			
 					<h2 class="pageTitle">Setup/Initialization</h2>
 					<p>simpleCart(js) requires using jQuery, Prototype, or Mootools. No extra configuration 
@@ -377,8 +372,7 @@
 </p>
 <p><strong>Quick Start</strong></p>
 <p>Add the script to your page and set your checkout method</p>
-<pre class="html">
-<script src="simpleCart.js"></script>
+<pre class="html"><script src="simpleCart.js"></script>
 <script>
   simpleCart({
     checkout: {
@@ -389,60 +383,56 @@
 </script>
 </pre>
 
-<p>To sell items from your &#8220;Shelf&#8221;, just add some classes to your html like this:</p>
-<pre class="html">
-<div class="simpleCart_shelfItem">
+<p>To sell items from your &#x201C;Shelf&#x201D;, just add some classes to your html like this:</p>
+<pre class="html"><div class="simpleCart_shelfItem">
   <h2 class="item_name"> Awesome T-shirt </h2>
-<p>  <input type="text" value="1" class="item_Quantity" /><br />
-  <span class="item_price">$35.99</span><br />
+<p>  <input type="text" value="1" class="item_Quantity"><br>
+  <span class="item_price">$35.99</span><br>
   <a class="item_add" href="javascript:;"> Add to Cart </a></p>
 </div>
 </pre>
 
 <p>Then just add classes where you want your totals to show or have your checkout buttons:</p>
-<pre class="html">
-<span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span>
+<pre class="html"><span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span>
 <a href="javascript:;" class="simpleCart_checkout">Checkout</a>
 </pre>
 
-<p>That&#8217;s it!&nbsp; See below for options you can set, and take a look at the checkout methods and different customizations available.</p>
+<p>That&#x2019;s it!&#xA0; See below for options you can set, and take a look at the checkout methods and different customizations available.</p>
 
 <p>You can set/change simpleCart options at any time:</p>
-<pre class="js">
-simpleCart({
-	option1: "value" ,
-	option2: "value2" 
+<pre class="js">simpleCart({
+	option1: &quot;value&quot; ,
+	option2: &quot;value2&quot; 
 });
 </pre><p>Here are the possible options and their default values: 
 </p>
-<pre class="js">
-simpleCart({
+<pre class="js">simpleCart({
 	// array representing the format and columns of the cart,
 	// see the cart columns documentation
 	cartColumns: [
-		{ attr: "name", label: "Name"},
-		{ view: "currency", attr: "price", label: "Price"},
-		{ view: "decrement", label: false},
-		{ attr: "quantity", label: "Qty"},
-		{ view: "increment", label: false},
-		{ view: "currency", attr: "total", label: "SubTotal" },
-		{ view: "remove", text: "Remove", label: false}
+		{ attr: &quot;name&quot;, label: &quot;Name&quot;},
+		{ view: &quot;currency&quot;, attr: &quot;price&quot;, label: &quot;Price&quot;},
+		{ view: &quot;decrement&quot;, label: false},
+		{ attr: &quot;quantity&quot;, label: &quot;Qty&quot;},
+		{ view: &quot;increment&quot;, label: false},
+		{ view: &quot;currency&quot;, attr: &quot;total&quot;, label: &quot;SubTotal&quot; },
+		{ view: &quot;remove&quot;, text: &quot;Remove&quot;, label: false}
 	],
 
-	// "div" or "table" - builds the cart as a 
+	// &quot;div&quot; or &quot;table&quot; - builds the cart as a 
 	// table or collection of divs
-	cartStyle: "div", 
+	cartStyle: &quot;div&quot;, 
 
 	// how simpleCart should checkout, see the 
 	// checkout reference for more info 
 	checkout: { 
-		type: "PayPal" , 
-		email: "you@yours.com" 
+		type: &quot;PayPal&quot; , 
+		email: &quot;you@yours.com&quot; 
 	},
 
 	// set the currency, see the currency 
 	// reference for more info
-	currency: "USD",
+	currency: &quot;USD&quot;,
 
 	// collection of arbitrary data you may want to store 
 	// with the cart, such as customer info
@@ -450,7 +440,7 @@ simpleCart({
 
 	// set the cart langauge 
 	// (may be used for checkout)
-	language: "english-us",
+	language: &quot;english-us&quot;,
 
 	// array of item fields that will not be 
 	// sent to checkout
@@ -500,14 +490,14 @@ simpleCart({
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/729949a71c7f04dbfdcfec35177792c3?s=62" />
+																<img src="http://www.gravatar.com/avatar/729949a71c7f04dbfdcfec35177792c3?s=62">
 								<p><em>Sep 11, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Mpa4Hu</strong>&nbsp; said:
-						        <p><p>Hello,&nbsp; I&#8217;m interesting, if paypal returns any information, like true or something, that the payment went okay.</p>
+								<strong>Mpa4Hu</strong>&#xA0; said:
+						        <p></p><p>Hello,&#xA0; I&#x2019;m interesting, if paypal returns any information, like true or something, that the payment went okay.</p>
 
-<p>I&#8217;m making some project and i need some event back.</p></p>
+<p>I&#x2019;m making some project and i need some event back.</p><p></p>
 							</div>
 						</li>
 					
@@ -522,7 +512,7 @@ simpleCart({
 			<h1 class="left"><a href="/">simpleCart(js)</a></h1>
 			<div class="right">
 				<a href="http://github.com/wojodesign/simplecart-js" target="_blank" class="icnGithub">Github</a>
-				&nbsp;&nbsp;
+				&#xA0;&#xA0;
 				<a href="http://twitter.com/simplecartjs" target="_blank" class="icnTwitter">Twitter</a>
 			</div>
 		</footer>
@@ -582,5 +572,5 @@ simpleCart(js) Demo Code.
   <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 <![endif]-->
 
-</body>
-</html>
+
+</body></html>

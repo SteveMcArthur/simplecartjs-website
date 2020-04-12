@@ -1,31 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
+<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+	<meta charset="utf-8">
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Javascript Shopping Cart - simpleCart(js) </title>
 	
 	<!--SEO & Social Content-->
-	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<meta property="og:title" content>
+	<meta property="og:description" content>
+	<meta property="og:image" content>
+	<meta name="description" content>
+	<meta name="author" content>
 
 	<!-- Mobile viewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- CSS-->
-	<link rel="stylesheet" href="/assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css" />
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css">
 	
 
 	<!-- All JavaScript at the bottom, except for Modernizr -->
@@ -325,7 +320,7 @@
 					
 				</ul>
 		
-				<h4>UI & DOM Manipulation</h4>
+				<h4>UI &amp; DOM Manipulation</h4>
 				<ul>
 					
 							<li><a href="/documentation/simplecart-update">.update</a></li>
@@ -369,15 +364,14 @@
 		
 	</nav>
 	<div id="main">
-					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &raquo; <span class="last">Shipping</span></p>
+					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &#xBB; <span class="last">Shipping</span></p>
 			
 					<h2 class="pageTitle">Shipping</h2>
-					<p>There are a number of methods for specifying shipping.&nbsp; For starters, there are 3 variables you can set for calculating shipping: <strong>shippingFlatRate</strong>, <strong>shippingQuantityRate</strong>, and <strong>shippingTotalRate</strong>.&nbsp; You can also set a <strong>shippingCustom</strong> function.&nbsp; <em>These 4 methods will be added up to create the total shipping cost</em></p>
+					<p>There are a number of methods for specifying shipping.&#xA0; For starters, there are 3 variables you can set for calculating shipping: <strong>shippingFlatRate</strong>, <strong>shippingQuantityRate</strong>, and <strong>shippingTotalRate</strong>.&#xA0; You can also set a <strong>shippingCustom</strong> function.&#xA0; <em>These 4 methods will be added up to create the total shipping cost</em></p>
 
 <p>To set a basic flat rate shipping, you can use <strong>shippingFlatRate</strong>.</p>
 
-<pre class="js">
-simpleCart({
+<pre class="js">simpleCart({
      shippingFlatRate: 10
 });
 </pre>
@@ -386,26 +380,23 @@ simpleCart({
 
 <p>For a shipping rate based on the total quantity of the cart (i.e. shipping quantity rate of $3 = $21 for 7 items), use <strong>shippingQuantityRate</strong>:</p>
 
-<pre class="js">
-simpleCart({
+<pre class="js">simpleCart({
     shippingQuantityRate: 3
 });
 </pre>
 
 <p>If you want a shipping rate that is a percentage of the total cost of the cart, use <strong>shippingTotalRate</strong>:</p>
 
-<pre class="js">
-simpleCart({
+<pre class="js">simpleCart({
      shippingTotalRate: 0.1
 });
 </pre>
 
-<p>You can also add a custom function that returns a shipping cost based on arbitrary criteria. Let&#8217;s say you wanted to have the cost of shipping be $10, unless there are more than 20 items in the cart:</p>
+<p>You can also add a custom function that returns a shipping cost based on arbitrary criteria. Let&#x2019;s say you wanted to have the cost of shipping be $10, unless there are more than 20 items in the cart:</p>
 
-<pre class="js">
-simpleCart({
+<pre class="js">simpleCart({
     shippingCustom: function(){ 
-         if( simpleCart.quantity() > 20 ){
+         if( simpleCart.quantity() &gt; 20 ){
               return 0;
          } else {
               return 10;
@@ -416,9 +407,8 @@ simpleCart({
 
 <p>You can also set this custom shipping function using a shortcut in the .shipping() function:</p>
 
-<pre class="js">
-simpleCart.shipping(function(){
-    if( simpleCart.quantity() > 20 ){
+<pre class="js">simpleCart.shipping(function(){
+    if( simpleCart.quantity() &gt; 20 ){
          return 0;
      } else {
          return 10;
@@ -426,11 +416,10 @@ simpleCart.shipping(function(){
 });
 </pre>
 
-<p>If you want to calculate shipping based on the individual items, you can modify the simpleCart.Item object to have items calculate their own shipping.&nbsp; Let&#8217;s say you wanted to have the shipping for each item be 2 if the item&#8217;s size is &#8220;small&#8221;, and 5 if the size is anything else:</p>
+<p>If you want to calculate shipping based on the individual items, you can modify the simpleCart.Item object to have items calculate their own shipping.&#xA0; Let&#x2019;s say you wanted to have the shipping for each item be 2 if the item&#x2019;s size is &#x201C;small&#x201D;, and 5 if the size is anything else:</p>
 
-<pre class="js">
-simpleCart.Item._.shipping = function(){
-     if( this.get( 'size' ) == "small" ){
+<pre class="js">simpleCart.Item._.shipping = function(){
+     if( this.get( &apos;size&apos; ) == &quot;small&quot; ){
          return this.quantity()*2;
      } else {
          return this.quantity()*5;
@@ -440,11 +429,10 @@ simpleCart.Item._.shipping = function(){
 
 <p>Of course, you could achieve the same effect by creating a custom shipping method for simpleCart that iterates through all the items:</p>
 
-<pre class="js">
-simpleCart.shipping(function(){
+<pre class="js">simpleCart.shipping(function(){
   var total = 0;
   simpleCart.each( function( item ){
-    if( item.get('size') == 'small' )[
+    if( item.get(&apos;size&apos;) == &apos;small&apos; )[
       total+= item.quantity()*2;
     } else {
       total+= item.quantity()*5;
@@ -456,11 +444,10 @@ simpleCart.shipping(function(){
 
 <p>If you want to see what the total shipping is at any time, you can call the .shipping() method and the total from all of the aforementioned methods will be returned:</p>
 
-<pre class="js">
-simpleCart.shipping(); // returns current shipping cost
+<pre class="js">simpleCart.shipping(); // returns current shipping cost
 </pre>
 
-<p>&nbsp;</p>
+<p>&#xA0;</p>
 			
 			
 			<div id="commentArea">
@@ -471,12 +458,12 @@ simpleCart.shipping(); // returns current shipping cost
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/67ebb5282f85e167ee11ad8e8540b7da?s=62" />
+																<img src="http://www.gravatar.com/avatar/67ebb5282f85e167ee11ad8e8540b7da?s=62">
 								<p><em>Aug 28, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Nathan Pointer</strong>&nbsp; said:
-						        <p><p>WHY IS THERE SO MUCH SEO LINK SPAMMING  LIKE ON EVERY PAGE :(</p></p>
+								<strong>Nathan Pointer</strong>&#xA0; said:
+						        <p></p><p>WHY IS THERE SO MUCH SEO LINK SPAMMING  LIKE ON EVERY PAGE :(</p><p></p>
 							</div>
 						</li>
 					
@@ -484,14 +471,14 @@ simpleCart.shipping(); // returns current shipping cost
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/f59c464bbb116b80dfc5a597ca875a43?s=62" />
+																<img src="http://www.gravatar.com/avatar/f59c464bbb116b80dfc5a597ca875a43?s=62">
 								<p><em>Sep 09, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Vitek</strong>&nbsp; said:
-						        <p><p>I was trying to use ShippingCustom so that if over over $10 then its free else $2, cant get it to work, can some0ne help me? email me: <span data-eeEncEmail_FYGoYqIQvf='1'>.(JavaScript must be enabled to view this email address)</span><script type="text/javascript">/*<![CDATA[*/var out = '',el = document.getElementsByTagName('span'),l = ['>','a','/','<',' 109',' 111',' 99',' 46',' 101',' 118',' 105',' 108',' 64',' 107',' 105',' 110',' 107',' 105',' 118','>','\"',' 109',' 111',' 99',' 46',' 101',' 118',' 105',' 108',' 64',' 107',' 105',' 110',' 107',' 105',' 118',':','o','t','l','i','a','m','\"','=','f','e','r','h','a ','<'],i = l.length,j = el.length;while (--i >= 0)out += unescape(l[i].replace(/^\s\s*/, '&#'));while (--j >= 0)if (el[j].getAttribute('data-eeEncEmail_FYGoYqIQvf'))el[j].innerHTML = out;/*]]>*/</script><br />
-or skype:vitek-uk<br />
-Thanks <img src="smile.gif" width="19" height="19" alt="smile" style="border:0;" /></p></p>
+								<strong>Vitek</strong>&#xA0; said:
+						        <p></p><p>I was trying to use ShippingCustom so that if over over $10 then its free else $2, cant get it to work, can some0ne help me? email me: <span data-eeencemail_fygoyqiqvf="1">.(JavaScript must be enabled to view this email address)</span><script type="text/javascript">/*<![CDATA[*/var out = '',el = document.getElementsByTagName('span'),l = ['>','a','/','<',' 109',' 111',' 99',' 46',' 101',' 118',' 105',' 108',' 64',' 107',' 105',' 110',' 107',' 105',' 118','>','\"',' 109',' 111',' 99',' 46',' 101',' 118',' 105',' 108',' 64',' 107',' 105',' 110',' 107',' 105',' 118',':','o','t','l','i','a','m','\"','=','f','e','r','h','a ','<'],i = l.length,j = el.length;while (--i >= 0)out += unescape(l[i].replace(/^\s\s*/, '&#'));while (--j >= 0)if (el[j].getAttribute('data-eeEncEmail_FYGoYqIQvf'))el[j].innerHTML = out;/*]]>*/</script><br>
+or skype:vitek-uk<br>
+Thanks <img src="smile.gif" width="19" height="19" alt="smile" style="border:0;"></p><p></p>
 							</div>
 						</li>
 					
@@ -499,16 +486,16 @@ Thanks <img src="smile.gif" width="19" height="19" alt="smile" style="border:0;"
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/a4bf02576045cfdb7940382c8b06e698?s=62" />
+																<img src="http://www.gravatar.com/avatar/a4bf02576045cfdb7940382c8b06e698?s=62">
 								<p><em>Sep 29, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Abrar</strong>&nbsp; said:
-						        <p><p>Hi, thank u very much for the excellent javascript. However i need to ask for favor: is it possible to set up the shipping calculation based on expedition&#8217;s rate? It will be specific for each country&#8217;s buyer. </p>
+								<strong>Abrar</strong>&#xA0; said:
+						        <p></p><p>Hi, thank u very much for the excellent javascript. However i need to ask for favor: is it possible to set up the shipping calculation based on expedition&#x2019;s rate? It will be specific for each country&#x2019;s buyer. </p>
 
 <p>Can you help.</p>
 
-<p>Thank u so much!</p></p>
+<p>Thank u so much!</p><p></p>
 							</div>
 						</li>
 					
@@ -516,20 +503,20 @@ Thanks <img src="smile.gif" width="19" height="19" alt="smile" style="border:0;"
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/071527356938c360b1f6184251894933?s=62" />
+																<img src="http://www.gravatar.com/avatar/071527356938c360b1f6184251894933?s=62">
 								<p><em>Oct 05, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Thomas</strong>&nbsp; said:
-						        <p><p>I am using the SimpleCart shopping cart and it is using cart upload method with the combined shipping for entire order being assigned to &#8220;handling_cart&#8221; variable on upload to PayPal.</p>
+								<strong>Thomas</strong>&#xA0; said:
+						        <p></p><p>I am using the SimpleCart shopping cart and it is using cart upload method with the combined shipping for entire order being assigned to &#x201C;handling_cart&#x201D; variable on upload to PayPal.</p>
 
 <p> </p>
 
-<p>This seems to be correct and what the &#8220;handling_cart&#8221; variable has been designed for. It displays the combined shipping/handling as &#8220;Shipping and handling:&#8221; on the initial order page.</p>
+<p>This seems to be correct and what the &#x201C;handling_cart&#x201D; variable has been designed for. It displays the combined shipping/handling as &#x201C;Shipping and handling:&#x201D; on the initial order page.</p>
 
 <p> </p>
 
-<p>On the confirmation email it uses &#8220;Postage and packaging:&#8221; as the description for combined amount.</p>
+<p>On the confirmation email it uses &#x201C;Postage and packaging:&#x201D; as the description for combined amount.</p>
 
 <p>Postage and packaging 5.00 GBP</p>
 
@@ -537,15 +524,15 @@ Thanks <img src="smile.gif" width="19" height="19" alt="smile" style="border:0;"
 
 <p>However when you go into PayPal account page for the transaction it breaks it down as :</p>
 
-<p> <br />
-Postage:&nbsp;  &nbsp; £0.00 GBP<br />
-Packing:&nbsp;  &nbsp; £5.00 GBP</p>
+<p> <br>
+Postage:&#xA0;  &#xA0; &#xA3;0.00 GBP<br>
+Packing:&#xA0;  &#xA0; &#xA3;5.00 GBP</p>
 
 <p> </p>
 
 <p>Can someone shed light on this inconsistency?</p>
 
-<p> Answers to thomas crabb -AT- excite .co.uk<br />
+<p> Answers to thomas crabb -AT- excite .co.uk<br>
 (remove spaces!)</p>
 
 <p>As far as I can see SimpleCart is doing everything right according to PayPal specifications, so issue must be with PayPal.</p>
@@ -554,7 +541,7 @@ Packing:&nbsp;  &nbsp; £5.00 GBP</p>
 
 <p>Thanks,</p>
 
-</p>
+<p></p>
 							</div>
 						</li>
 					
@@ -562,12 +549,12 @@ Packing:&nbsp;  &nbsp; £5.00 GBP</p>
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/585138f74e04ab3bbb7efe561ff4fd9b?s=62" />
+																<img src="http://www.gravatar.com/avatar/585138f74e04ab3bbb7efe561ff4fd9b?s=62">
 								<p><em>Oct 29, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Melissa Wright</strong>&nbsp; said:
-						        <p><p>I can&#8217;t open the download! I&#8217;ve tried with several different programs, help! :(</p></p>
+								<strong>Melissa Wright</strong>&#xA0; said:
+						        <p></p><p>I can&#x2019;t open the download! I&#x2019;ve tried with several different programs, help! :(</p><p></p>
 							</div>
 						</li>
 					
@@ -582,7 +569,7 @@ Packing:&nbsp;  &nbsp; £5.00 GBP</p>
 			<h1 class="left"><a href="/">simpleCart(js)</a></h1>
 			<div class="right">
 				<a href="http://github.com/wojodesign/simplecart-js" target="_blank" class="icnGithub">Github</a>
-				&nbsp;&nbsp;
+				&#xA0;&#xA0;
 				<a href="http://twitter.com/simplecartjs" target="_blank" class="icnTwitter">Twitter</a>
 			</div>
 		</footer>
@@ -642,5 +629,5 @@ simpleCart(js) Demo Code.
   <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 <![endif]-->
 
-</body>
-</html>
+
+</body></html>

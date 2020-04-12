@@ -1,31 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
+<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+	<meta charset="utf-8">
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Javascript Shopping Cart - simpleCart(js) </title>
 	
 	<!--SEO & Social Content-->
-	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<meta property="og:title" content>
+	<meta property="og:description" content>
+	<meta property="og:image" content>
+	<meta name="description" content>
+	<meta name="author" content>
 
 	<!-- Mobile viewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- CSS-->
-	<link rel="stylesheet" href="/assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css" />
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css">
 	
 
 	<!-- All JavaScript at the bottom, except for Modernizr -->
@@ -325,7 +320,7 @@
 					
 				</ul>
 		
-				<h4>UI & DOM Manipulation</h4>
+				<h4>UI &amp; DOM Manipulation</h4>
 				<ul>
 					
 							<li><a href="/documentation/simplecart-update">.update</a></li>
@@ -369,23 +364,22 @@
 		
 	</nav>
 	<div id="main">
-					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &raquo; <span class="last">beforeRemove</span></p>
+					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &#xBB; <span class="last">beforeRemove</span></p>
 			
-					<h2 class="pageTitle">'beforeRemove' Event</h2>
-					<p>The &#8216;beforeRemove&#8217; event is triggered when an item is about to be removed from the cart.&nbsp; It passes a single parameter of the Item about to be removed, which can be modified. </p>
+					<h2 class="pageTitle">&apos;beforeRemove&apos; Event</h2>
+					<p>The &#x2018;beforeRemove&#x2019; event is triggered when an item is about to be removed from the cart.&#xA0; It passes a single parameter of the Item about to be removed, which can be modified. </p>
 
 <p> If a callback for the event returns false, the item will not be removed. </p>
 
 <pre class="js">
-
 // simple callback example
-simpleCart.bind( 'beforeRemove' , function( item ){
-  console.log( item.get('name') + " was removed from the cart" ); 
+simpleCart.bind( &apos;beforeRemove&apos; , function( item ){
+  console.log( item.get(&apos;name&apos;) + &quot; was removed from the cart&quot; ); 
 });
 
 </pre>
 
-<p>&nbsp;</p>
+<p>&#xA0;</p>
 			
 			
 			<div id="commentArea">
@@ -396,16 +390,16 @@ simpleCart.bind( 'beforeRemove' , function( item ){
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/9ecebe1b9f4d0c462809dff23b6fd547?s=62" />
+																<img src="http://www.gravatar.com/avatar/9ecebe1b9f4d0c462809dff23b6fd547?s=62">
 								<p><em>Sep 02, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Christian Nikkanen</strong>&nbsp; said:
-						        <p><p>I have a problem with this. I have this function stated to be executed before an item removal:<br />
-function RemoveProduct()&#123;return confirm(&#8220;Poista?&#8221;);&#125;</p>
+								<strong>Christian Nikkanen</strong>&#xA0; said:
+						        <p></p><p>I have a problem with this. I have this function stated to be executed before an item removal:<br>
+function RemoveProduct(){return confirm(&#x201C;Poista?&#x201D;);}</p>
 
-<p>But here&#8217;s what it does:<br />
-It simply asks to confirm the removal of a product, but it doesn&#8217;t really care about the selection, if it returns true, it removes it, if it returns false it removes it. Any help?</p></p>
+<p>But here&#x2019;s what it does:<br>
+It simply asks to confirm the removal of a product, but it doesn&#x2019;t really care about the selection, if it returns true, it removes it, if it returns false it removes it. Any help?</p><p></p>
 							</div>
 						</li>
 					
@@ -420,7 +414,7 @@ It simply asks to confirm the removal of a product, but it doesn&#8217;t really 
 			<h1 class="left"><a href="/">simpleCart(js)</a></h1>
 			<div class="right">
 				<a href="http://github.com/wojodesign/simplecart-js" target="_blank" class="icnGithub">Github</a>
-				&nbsp;&nbsp;
+				&#xA0;&#xA0;
 				<a href="http://twitter.com/simplecartjs" target="_blank" class="icnTwitter">Twitter</a>
 			</div>
 		</footer>
@@ -480,5 +474,5 @@ simpleCart(js) Demo Code.
   <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 <![endif]-->
 
-</body>
-</html>
+
+</body></html>

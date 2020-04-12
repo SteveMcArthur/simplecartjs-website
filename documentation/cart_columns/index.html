@@ -1,31 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
+<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+	<meta charset="utf-8">
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Javascript Shopping Cart - simpleCart(js) </title>
 	
 	<!--SEO & Social Content-->
-	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<meta property="og:title" content>
+	<meta property="og:description" content>
+	<meta property="og:image" content>
+	<meta name="description" content>
+	<meta name="author" content>
 
 	<!-- Mobile viewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- CSS-->
-	<link rel="stylesheet" href="/assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css" />
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css">
 	
 
 	<!-- All JavaScript at the bottom, except for Modernizr -->
@@ -325,7 +320,7 @@
 					
 				</ul>
 		
-				<h4>UI & DOM Manipulation</h4>
+				<h4>UI &amp; DOM Manipulation</h4>
 				<ul>
 					
 							<li><a href="/documentation/simplecart-update">.update</a></li>
@@ -369,39 +364,36 @@
 		
 	</nav>
 	<div id="main">
-					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &raquo; <span class="last">Cart Columns</span></p>
+					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &#xBB; <span class="last">Cart Columns</span></p>
 			
 					<h2 class="pageTitle">Cart Columns</h2>
 					<p>The Cart Columns allow the user to specify how the cart will be formatted and displayed. There is a lot of flexibility here, take a look at the default setup:</p>
 
-<pre class="js">
-simpleCart({
+<pre class="js">simpleCart({
     cartColumns: [
-        { attr: "name" , label: "Name" } ,
-        { attr: "price" , label: "Price", view: 'currency' } ,
-        { view: "decrement" , label: false , text: "-" } ,
-        { attr: "quantity" , label: "Qty" } ,
-        { view: "increment" , label: false , text: "+" } ,
-        { attr: "total" , label: "SubTotal", view: 'currency' } ,
-        { view: "remove" , text: "Remove" , label: false }
+        { attr: &quot;name&quot; , label: &quot;Name&quot; } ,
+        { attr: &quot;price&quot; , label: &quot;Price&quot;, view: &apos;currency&apos; } ,
+        { view: &quot;decrement&quot; , label: false , text: &quot;-&quot; } ,
+        { attr: &quot;quantity&quot; , label: &quot;Qty&quot; } ,
+        { view: &quot;increment&quot; , label: false , text: &quot;+&quot; } ,
+        { attr: &quot;total&quot; , label: &quot;SubTotal&quot;, view: &apos;currency&apos; } ,
+        { view: &quot;remove&quot; , text: &quot;Remove&quot; , label: false }
     ]
 });
 </pre>
 <p>Each column is represented by an object, the most basic setup simple specifies which attribute to display and how to label the column:</p>
 
-<pre class="js">
-{ attr: "name" , label: "Name" }
+<pre class="js">{ attr: &quot;name&quot; , label: &quot;Name&quot; }
 </pre>
 
-<p>There are also some built in &#8216;views&#8217; that will create a special column. For example, an &#8216;increment&#8217; view:</p>
+<p>There are also some built in &#x2018;views&#x2019; that will create a special column. For example, an &#x2018;increment&#x2019; view:</p>
 
-<pre class="js">
-{ view: "increment" , label: false , text: "+" }
+<pre class="js">{ view: &quot;increment&quot; , label: false , text: &quot;+&quot; }
 </pre>
 
 <p>will have a link that increments the quantity. Setting the label:false will hide the label for the view. You can specify the text of the link with that text: attribute.</p>
 
-<p>You can add view: &#8220;currency&#8221; to format the column as currency (see the currency section on more information on currency formatting).</p>
+<p>You can add view: &#x201C;currency&#x201D; to format the column as currency (see the currency section on more information on currency formatting).</p>
 
 <p>There are a number of built-in views, and you can create your own. Here are what is already available:</p>
 
@@ -409,14 +401,12 @@ simpleCart({
 
 <p>This is the basic view that displays an attribute of the item, and looks like</p>
 
-<pre class="js">
-{ attr: "name" , label: "Name" }
+<pre class="js">{ attr: &quot;name&quot; , label: &quot;Name&quot; }
 </pre>
 
 <p>will output</p>
 
-<pre class="html">
-<div class="item-name">Awesome T-Shirt</div>
+<pre class="html"><div class="item-name">Awesome T-Shirt</div>
 </pre>
 
 <p>This will simply display the attribute value and set the header label. Notice you do not need to specify the view in the object: this is the default view</p>
@@ -425,128 +415,106 @@ simpleCart({
 
 <p>This view is exactly like the attribute view, except that it will format the attribute value as currency:</p>
 
-<pre class="js">
-{ attr: "price" , label: "Price", view: 'currency' }
+<pre class="js">{ attr: &quot;price&quot; , label: &quot;Price&quot;, view: &apos;currency&apos; }
 </pre>
-<pre class="html">
-<div class="item-price">$139.86</div>
+<pre class="html"><div class="item-price">$139.86</div>
 </pre>
 
 <h4>Decrement</h4>
 
 <p>This view will output a link that will decrement the quantity of the item:</p>
 
-<pre class="js">
-{view:'decrement', label: false }
+<pre class="js">{view:&apos;decrement&apos;, label: false }
 </pre>
-<pre class="html">
-<div class="item-decrement "><a href="javascript:;" class="simpleCart_decrement">-</a></div>
+<pre class="html"><div class="item-decrement "><a href="javascript:;" class="simpleCart_decrement">-</a></div>
 </pre>
 
-<p>Optionally, you can set the text attribute which will set the innerHTML of the link (default is &#8216;-&#8217;):</p>
+<p>Optionally, you can set the text attribute which will set the innerHTML of the link (default is &#x2018;-&#x2019;):</p>
 
-<pre class="js">
-{view:'decrement' , label: false, text: 'Less' }
+<pre class="js">{view:&apos;decrement&apos; , label: false, text: &apos;Less&apos; }
 </pre>
-<pre class="html">
-<div class="item-decrement "><a href="javascript:;" class="simpleCart_decrement">Less</a></div>
+<pre class="html"><div class="item-decrement "><a href="javascript:;" class="simpleCart_decrement">Less</a></div>
 </pre>
 
 <h4>Increment</h4>
 
 <p>This view will output a link that will increment the quantity of the item:</p>
 
-<pre class="js">
-{view:'increment', label: false }
+<pre class="js">{view:&apos;increment&apos;, label: false }
 </pre>
-<pre class="html">
-<div class="item-increment "><a href="javascript:;" class="simpleCart_increment">+</a></div>
+<pre class="html"><div class="item-increment "><a href="javascript:;" class="simpleCart_increment">+</a></div>
 </pre>
 
-<p>Optionally, you can set the text attribute which will set the innerHTML of the link (default is &#8216;+&#8217;):</p>
+<p>Optionally, you can set the text attribute which will set the innerHTML of the link (default is &#x2018;+&#x2019;):</p>
 
-<pre class="js">
-{view:'increment' , label: false, text: 'More' }
+<pre class="js">{view:&apos;increment&apos; , label: false, text: &apos;More&apos; }
 </pre>
-<pre class="html">
-<div class="item-increment "><a href="javascript:;" class="simpleCart_increment">More</a></div>
+<pre class="html"><div class="item-increment "><a href="javascript:;" class="simpleCart_increment">More</a></div>
 </pre>
 
 <h4>Remove</h4>
 
 <p>This view will output a link that will remove the item from the cart when clicked:</p>
 
-<pre class="js">
-{view:'remove', label: 'Remove' }
+<pre class="js">{view:&apos;remove&apos;, label: &apos;Remove&apos; }
 </pre>
-<pre class="html">
-<div class="item-remove "><a href="javascript:;" class="simpleCart_remove">X</a></div>
+<pre class="html"><div class="item-remove "><a href="javascript:;" class="simpleCart_remove">X</a></div>
 </pre>
 
-<p>Optionally, you can set the text attribute which will set the innerHTML of the link (default is &#8216;X&#8217;):</p>
+<p>Optionally, you can set the text attribute which will set the innerHTML of the link (default is &#x2018;X&#x2019;):</p>
 
-<pre class="js">
-{view:'remove' , label: 'Remove', text: 'Remove' }
+<pre class="js">{view:&apos;remove&apos; , label: &apos;Remove&apos;, text: &apos;Remove&apos; }
 </pre>
-<pre class="html">
-<div class="item-remove "><a href="javascript:;" class="simpleCart_remove">Remove</a></div>
+<pre class="html"><div class="item-remove "><a href="javascript:;" class="simpleCart_remove">Remove</a></div>
 </pre>
 
 <h4>Link</h4>
 
 <p>This view will output a link, using the attribute provided as the href, and the text value as the innerHTML:</p>
 
-<pre class="js">
-{view:'link' , label: 'Details' , attr: 'pageLink' , text: 'View More' }
+<pre class="js">{view:&apos;link&apos; , label: &apos;Details&apos; , attr: &apos;pageLink&apos; , text: &apos;View More&apos; }
 </pre>
-<pre class="html">
-<div class="item-pageLink"><a href="[value-of-pageLink-attr]">View More</a></div>
+<pre class="html"><div class="item-pageLink"><a href="[value-of-pageLink-attr]">View More</a></div>
 </pre>
 
 <h4>Image</h4>
 
 <p>This view will output an image, using the attribute specified as the source:</p>
 
-<pre class="js">
-{view:'image' , attr:'thumb', label: false}
+<pre class="js">{view:&apos;image&apos; , attr:&apos;thumb&apos;, label: false}
 </pre>
-<pre class="html">
-<div class="item-thumb "><img src='[value-of-thumb-attr]' /></div>
+<pre class="html"><div class="item-thumb "><img src="[value-of-thumb-attr]"></div>
 </pre>
 
 <h4>Input</h4>
 
 <p>This view will create an input, with the value set to the attribute provided. When the user alters the input text, simpleCart(js) will input the item attribute. This example makes the quantity an input that the user can alter:</p>
 
-<pre class="js">
-{view:'input', attr:'quantity', label: "Quantity" }
+<pre class="js">{view:&apos;input&apos;, attr:&apos;quantity&apos;, label: &quot;Quantity&quot; }
 </pre>
-<pre class="html">
-<div class="item-quantity"><input type="text" value="[item-quantity]" class="simpleCart_input"/></div>
+<pre class="html"><div class="item-quantity"><input type="text" value="[item-quantity]" class="simpleCart_input"></div>
 </pre>
 
 <h4>Creating your own view</h4>
 
 <p>You can create custom views for the cart by setting the view to a function instead of a string. The function should take two arguments, the item for that row, and the column details you specify.</p>
-<pre class="js">
-{ view: function( item , column ){
+<pre class="js">{ view: function( item , column ){
         // return some html
   } ,
-  label: "My Custom Column" 
+  label: &quot;My Custom Column&quot; 
 }
 </pre>
 
-<p>As an example, let&#8217;s say you wanted to have one column that displayed the total quantity, along with the links for incrementing and decrementing the quantity:</p>
-<pre class="js">
-{ view: function(item, column){
-    return  "<span>"+ item.quantity() +"</span>" + 
-            "<div>" +
-                "<a href='javascript:;' class='simpleCart_increment'>+</a>" +
-                "<a href='javascript:;' class='simpleCart_decrement'>-</a>" +
-            "</div>";
+<p>As an example, let&#x2019;s say you wanted to have one column that displayed the total quantity, along with the links for incrementing and decrementing the quantity:</p>
+<pre class="js">{ view: function(item, column){
+    return  &quot;<span>&quot;+ item.quantity() +&quot;</span>&quot; + 
+            &quot;<div>&quot; +
+                &quot;<a href="javascript:;" class="simpleCart_increment">+</a>&quot; +
+                &quot;<a href="javascript:;" class="simpleCart_decrement">-</a>&quot; +
+            &quot;</div>&quot;;
   } , 
-  attr: "custom" ,
-  label: "Quantity"
+  attr: &quot;custom&quot; ,
+  label: &quot;Quantity&quot;
 },
 </pre>
 			
@@ -559,12 +527,12 @@ simpleCart({
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/94bb2e741b088c493b6caa687ba4768f?s=62" />
+																<img src="http://www.gravatar.com/avatar/94bb2e741b088c493b6caa687ba4768f?s=62">
 								<p><em>Aug 11, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Hunii</strong>&nbsp; said:
-						        <p><p>Now I feel sutipd. That&#8217;s cleared it up for me</p></p>
+								<strong>Hunii</strong>&#xA0; said:
+						        <p></p><p>Now I feel sutipd. That&#x2019;s cleared it up for me</p><p></p>
 							</div>
 						</li>
 					
@@ -579,7 +547,7 @@ simpleCart({
 			<h1 class="left"><a href="/">simpleCart(js)</a></h1>
 			<div class="right">
 				<a href="http://github.com/wojodesign/simplecart-js" target="_blank" class="icnGithub">Github</a>
-				&nbsp;&nbsp;
+				&#xA0;&#xA0;
 				<a href="http://twitter.com/simplecartjs" target="_blank" class="icnTwitter">Twitter</a>
 			</div>
 		</footer>
@@ -639,5 +607,5 @@ simpleCart(js) Demo Code.
   <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 <![endif]-->
 
-</body>
-</html>
+
+</body></html>

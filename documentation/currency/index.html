@@ -1,31 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
+<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+	<meta charset="utf-8">
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Javascript Shopping Cart - simpleCart(js) </title>
 	
 	<!--SEO & Social Content-->
-	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<meta property="og:title" content>
+	<meta property="og:description" content>
+	<meta property="og:image" content>
+	<meta name="description" content>
+	<meta name="author" content>
 
 	<!-- Mobile viewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- CSS-->
-	<link rel="stylesheet" href="/assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css" />
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css">
 	
 
 	<!-- All JavaScript at the bottom, except for Modernizr -->
@@ -325,7 +320,7 @@
 					
 				</ul>
 		
-				<h4>UI & DOM Manipulation</h4>
+				<h4>UI &amp; DOM Manipulation</h4>
 				<ul>
 					
 							<li><a href="/documentation/simplecart-update">.update</a></li>
@@ -369,42 +364,38 @@
 		
 	</nav>
 	<div id="main">
-					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &raquo; <span class="last">Currency</span></p>
+					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &#xBB; <span class="last">Currency</span></p>
 			
 					<h2 class="pageTitle">Currency</h2>
 					<p>simpleCart(js) has a number of currencies that are already supported out of the box. You can specify the currency a number of ways, such as setting the option:</p>
 
-<pre class="js">
-simpleCart({
-    currency: "GBP" // set the currency to pounds sterling
+<pre class="js">simpleCart({
+    currency: &quot;GBP&quot; // set the currency to pounds sterling
 });
 </pre>
 
 <p>You can also set the currency using the .currency() function:</p>
 
-<pre class="js">
-simpleCart.currency( "EUR" ); // set the currency to Euros
+<pre class="js">simpleCart.currency( &quot;EUR&quot; ); // set the currency to Euros
 </pre>
 
 <p>The built-in currencies are listed below, but you can also set a new currency using the .currency() function:</p>
 
-<pre class="js">
-simpleCart.currency({ 
-    code: "BTC" ,
-    name: "Bitcoin" ,
-    symbol: "BTC" 
+<pre class="js">simpleCart.currency({ 
+    code: &quot;BTC&quot; ,
+    name: &quot;Bitcoin&quot; ,
+    symbol: &quot;BTC&quot; 
 });
 </pre>
 
 <p>There are a number of formatting options when setting a currency as well. For example, if you wanted your currency to be formatted as 123 456,780 $AWE instead of $123,456.78, you would use:</p>
 
-<pre class="js">
-simpleCart.currency({
-    code: "MAC" ,
-    name: "My Awesome Currency" ,
-    symbol: " $AWE" ,
-    delimiter: " " , 
-    decimal: "," , 
+<pre class="js">simpleCart.currency({
+    code: &quot;MAC&quot; ,
+    name: &quot;My Awesome Currency&quot; ,
+    symbol: &quot; $AWE&quot; ,
+    delimiter: &quot; &quot; , 
+    decimal: &quot;,&quot; , 
     after: true ,
     accuracy: 3
 });
@@ -412,41 +403,39 @@ simpleCart.currency({
 
 <p>If you would like to see what the currency is currently set to, you can call the .currency() function with no arguments:</p>
 
-<pre class="js">
-simpleCart.currency("USD");
+<pre class="js">simpleCart.currency(&quot;USD&quot;);
 
-simpleCart.currency();  // returns { code:"USD", symbol:"&#36;", name:"US Dollar" } 
+simpleCart.currency();  // returns { code:&quot;USD&quot;, symbol:&quot;$&quot;, name:&quot;US Dollar&quot; } 
 </pre>
 
 <p>Built-in currencies:</p>
 
-<pre class="js">
-"USD": { code:"USD", symbol:"&#36;", name:"US Dollar" } , 
-"AUD": { code:"AUD", symbol:"&#36;", name:"Australian Dollar" } , 
-"BRL": { code:"BRL", symbol:"&#36;", name:"Brazilian Real" } , 
-"CAD": { code:"CAD", symbol:"&#36;", name:"Canadian Dollar" } , 
-"CZK": { code:"CZK", symbol:"&nbsp;&#75;&#269;", name:"Czech Koruna", after: true } , 
-"DKK": { code:"DKK", symbol:"DKK&nbsp;", name:"Danish Krone" } , 
-"EUR": { code:"EUR", symbol:"&euro;", name:"Euro" } , 
-"HKD": { code:"HKD", symbol:"&#36;", name:"Hong Kong Dollar" } ,
-"HUF": { code:"HUF", symbol:"&#70;&#116;", name:"Hungarian Forint" } ,
-"ILS": { code:"ILS", symbol:"&#8362;", name:"Israeli New Sheqel" } ,
-"JPY": { code:"JPY", symbol:"&yen;", name:"Japanese Yen" } ,
-"MXN": { code:"MXN", symbol:"&#36;", name:"Mexican Peso" } ,
-"NOK": { code:"NOK", symbol:"NOK&nbsp;", name:"Norwegian Krone" } ,
-"NZD": { code:"NZD", symbol:"&#36;", name:"New Zealand Dollar" } ,
-"PLN": { code:"PLN", symbol:"PLN&nbsp;", name:"Polish Zloty" } ,
-"GBP": { code:"GBP", symbol:"&pound;", name:"Pound Sterling" } ,
-"SGD": { code:"SGD", symbol:"&#36;", name:"Singapore Dollar" } ,
-"SEK": { code:"SEK", symbol:"SEK&nbsp;", name:"Swedish Krona" } ,
-"CHF": { code:"CHF", symbol:"CHF&nbsp;", name:"Swiss Franc" } ,
-"THB": { code:"THB", symbol:"&#3647;", name:"Thai Baht" } ,
-"BTC": { code:"BTC", symbol:" BTC", name:"Bitcoin", accuracy: 4, after: true  }
+<pre class="js">&quot;USD&quot;: { code:&quot;USD&quot;, symbol:&quot;$&quot;, name:&quot;US Dollar&quot; } , 
+&quot;AUD&quot;: { code:&quot;AUD&quot;, symbol:&quot;$&quot;, name:&quot;Australian Dollar&quot; } , 
+&quot;BRL&quot;: { code:&quot;BRL&quot;, symbol:&quot;$&quot;, name:&quot;Brazilian Real&quot; } , 
+&quot;CAD&quot;: { code:&quot;CAD&quot;, symbol:&quot;$&quot;, name:&quot;Canadian Dollar&quot; } , 
+&quot;CZK&quot;: { code:&quot;CZK&quot;, symbol:&quot;&#xA0;K&#x10D;&quot;, name:&quot;Czech Koruna&quot;, after: true } , 
+&quot;DKK&quot;: { code:&quot;DKK&quot;, symbol:&quot;DKK&#xA0;&quot;, name:&quot;Danish Krone&quot; } , 
+&quot;EUR&quot;: { code:&quot;EUR&quot;, symbol:&quot;&#x20AC;&quot;, name:&quot;Euro&quot; } , 
+&quot;HKD&quot;: { code:&quot;HKD&quot;, symbol:&quot;$&quot;, name:&quot;Hong Kong Dollar&quot; } ,
+&quot;HUF&quot;: { code:&quot;HUF&quot;, symbol:&quot;Ft&quot;, name:&quot;Hungarian Forint&quot; } ,
+&quot;ILS&quot;: { code:&quot;ILS&quot;, symbol:&quot;&#x20AA;&quot;, name:&quot;Israeli New Sheqel&quot; } ,
+&quot;JPY&quot;: { code:&quot;JPY&quot;, symbol:&quot;&#xA5;&quot;, name:&quot;Japanese Yen&quot; } ,
+&quot;MXN&quot;: { code:&quot;MXN&quot;, symbol:&quot;$&quot;, name:&quot;Mexican Peso&quot; } ,
+&quot;NOK&quot;: { code:&quot;NOK&quot;, symbol:&quot;NOK&#xA0;&quot;, name:&quot;Norwegian Krone&quot; } ,
+&quot;NZD&quot;: { code:&quot;NZD&quot;, symbol:&quot;$&quot;, name:&quot;New Zealand Dollar&quot; } ,
+&quot;PLN&quot;: { code:&quot;PLN&quot;, symbol:&quot;PLN&#xA0;&quot;, name:&quot;Polish Zloty&quot; } ,
+&quot;GBP&quot;: { code:&quot;GBP&quot;, symbol:&quot;&#xA3;&quot;, name:&quot;Pound Sterling&quot; } ,
+&quot;SGD&quot;: { code:&quot;SGD&quot;, symbol:&quot;$&quot;, name:&quot;Singapore Dollar&quot; } ,
+&quot;SEK&quot;: { code:&quot;SEK&quot;, symbol:&quot;SEK&#xA0;&quot;, name:&quot;Swedish Krona&quot; } ,
+&quot;CHF&quot;: { code:&quot;CHF&quot;, symbol:&quot;CHF&#xA0;&quot;, name:&quot;Swiss Franc&quot; } ,
+&quot;THB&quot;: { code:&quot;THB&quot;, symbol:&quot;&#xE3F;&quot;, name:&quot;Thai Baht&quot; } ,
+&quot;BTC&quot;: { code:&quot;BTC&quot;, symbol:&quot; BTC&quot;, name:&quot;Bitcoin&quot;, accuracy: 4, after: true  }
 </pre>
 
 <p><strong>If there are errors or problems with the default formatting of your currency, please let us know so we can update the base code</strong></p>
 
-<p>&nbsp;</p>
+<p>&#xA0;</p>
 			
 			
 			<div id="commentArea">
@@ -457,13 +446,13 @@ simpleCart.currency();  // returns { code:"USD", symbol:"&#36;", name:"US Dollar
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/e04680e287d1f189afa75a2ae36b7cb9?s=62" />
+																<img src="http://www.gravatar.com/avatar/e04680e287d1f189afa75a2ae36b7cb9?s=62">
 								<p><em>Jun 04, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>user10</strong>&nbsp; said:
-						        <p><p>Hi. <br />
-Accuracy: and after: work perfect, but custom values for delimeters and decimals (those shown in your example) don&#8217;t work for me.</p></p>
+								<strong>user10</strong>&#xA0; said:
+						        <p></p><p>Hi. <br>
+Accuracy: and after: work perfect, but custom values for delimeters and decimals (those shown in your example) don&#x2019;t work for me.</p><p></p>
 							</div>
 						</li>
 					
@@ -471,12 +460,12 @@ Accuracy: and after: work perfect, but custom values for delimeters and decimals
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/0dbc37df7fba2b20d2b1bda9b66ac333?s=62" />
+																<img src="http://www.gravatar.com/avatar/0dbc37df7fba2b20d2b1bda9b66ac333?s=62">
 								<p><em>Jul 01, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>kevin</strong>&nbsp; said:
-						        <p><p>why there&#8217;s no IDR (Indonesian Rupiah) in currency ?</p></p>
+								<strong>kevin</strong>&#xA0; said:
+						        <p></p><p>why there&#x2019;s no IDR (Indonesian Rupiah) in currency ?</p><p></p>
 							</div>
 						</li>
 					
@@ -484,17 +473,17 @@ Accuracy: and after: work perfect, but custom values for delimeters and decimals
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/cc56a6a2bf027168ebe2ed06b19a9763?s=62" />
+																<img src="http://www.gravatar.com/avatar/cc56a6a2bf027168ebe2ed06b19a9763?s=62">
 								<p><em>Aug 22, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Murley</strong>&nbsp; said:
-						        <p><p>Hi&#8230;<br />
-I want to know can i use any Indian payment gateway with this script&#8230; If so then it is useful to me&#8230; <br />
-If there are any methods to use Indian Rupee INR to be used as the checkout method using indian payment gateway&#8230; Please let me know&#8230;</p>
+								<strong>Murley</strong>&#xA0; said:
+						        <p></p><p>Hi&#x2026;<br>
+I want to know can i use any Indian payment gateway with this script&#x2026; If so then it is useful to me&#x2026; <br>
+If there are any methods to use Indian Rupee INR to be used as the checkout method using indian payment gateway&#x2026; Please let me know&#x2026;</p>
 
-<p>Thanks<br />
-Murley</p></p>
+<p>Thanks<br>
+Murley</p><p></p>
 							</div>
 						</li>
 					
@@ -502,14 +491,14 @@ Murley</p></p>
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/9ecebe1b9f4d0c462809dff23b6fd547?s=62" />
+																<img src="http://www.gravatar.com/avatar/9ecebe1b9f4d0c462809dff23b6fd547?s=62">
 								<p><em>Sep 05, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Christian Nikkanen</strong>&nbsp; said:
-						        <p><p>I don&#8217;t like the formatting of prices. I know that you use $0.00 in US, but here in Finland and Europe, we prefer 0.00€, and I&#8217;m wondering how would I do this.</p>
+								<strong>Christian Nikkanen</strong>&#xA0; said:
+						        <p></p><p>I don&#x2019;t like the formatting of prices. I know that you use $0.00 in US, but here in Finland and Europe, we prefer 0.00&#x20AC;, and I&#x2019;m wondering how would I do this.</p>
 
-</p>
+<p></p>
 							</div>
 						</li>
 					
@@ -517,12 +506,12 @@ Murley</p></p>
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/ec2f38f922d0404ce3694bb1e0a1b657?s=62" />
+																<img src="http://www.gravatar.com/avatar/ec2f38f922d0404ce3694bb1e0a1b657?s=62">
 								<p><em>Oct 17, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>coach outlet</strong>&nbsp; said:
-						        <p><p>Wacy: and after: work perfect, but custom values for delimeters and decimals (those shown in your example) don’t work for me.</p></p>
+								<strong>coach outlet</strong>&#xA0; said:
+						        <p></p><p>Wacy: and after: work perfect, but custom values for delimeters and decimals (those shown in your example) don&#x2019;t work for me.</p><p></p>
 							</div>
 						</li>
 					
@@ -530,19 +519,19 @@ Murley</p></p>
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/6cc1d48d9f1ca3c5f266c16bcff25200?s=62" />
+																<img src="http://www.gravatar.com/avatar/6cc1d48d9f1ca3c5f266c16bcff25200?s=62">
 								<p><em>Oct 18, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>boyan</strong>&nbsp; said:
-						        <p><p>hi</p>
+								<strong>boyan</strong>&#xA0; said:
+						        <p></p><p>hi</p>
 
-<p>im getting really weird grandtotals for some of my items like <br />
-€21,800000000000001</p>
+<p>im getting really weird grandtotals for some of my items like <br>
+&#x20AC;21,800000000000001</p>
 
 <p>and my items are priced like 5,5 2,3 and so on. Is this a known thing? How could i resolve it? </p>
 
-<p>Many thx</p></p>
+<p>Many thx</p><p></p>
 							</div>
 						</li>
 					
@@ -550,12 +539,12 @@ Murley</p></p>
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/98b1b05334b797e28cabe00c67ecdebb?s=62" />
+																<img src="http://www.gravatar.com/avatar/98b1b05334b797e28cabe00c67ecdebb?s=62">
 								<p><em>Oct 26, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>worldquest</strong>&nbsp; said:
-						        <p><p>How can i make a shopping cart with custom gateway system for my site hosted in weebly.com</p></p>
+								<strong>worldquest</strong>&#xA0; said:
+						        <p></p><p>How can i make a shopping cart with custom gateway system for my site hosted in weebly.com</p><p></p>
 							</div>
 						</li>
 					
@@ -570,7 +559,7 @@ Murley</p></p>
 			<h1 class="left"><a href="/">simpleCart(js)</a></h1>
 			<div class="right">
 				<a href="http://github.com/wojodesign/simplecart-js" target="_blank" class="icnGithub">Github</a>
-				&nbsp;&nbsp;
+				&#xA0;&#xA0;
 				<a href="http://twitter.com/simplecartjs" target="_blank" class="icnTwitter">Twitter</a>
 			</div>
 		</footer>
@@ -630,5 +619,5 @@ simpleCart(js) Demo Code.
   <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 <![endif]-->
 
-</body>
-</html>
+
+</body></html>

@@ -1,31 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
+<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+	<meta charset="utf-8">
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Javascript Shopping Cart - simpleCart(js) </title>
 	
 	<!--SEO & Social Content-->
-	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<meta property="og:title" content>
+	<meta property="og:description" content>
+	<meta property="og:image" content>
+	<meta name="description" content>
+	<meta name="author" content>
 
 	<!-- Mobile viewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- CSS-->
-	<link rel="stylesheet" href="/assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css" />
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css">
 	
 
 	<!-- All JavaScript at the bottom, except for Modernizr -->
@@ -325,7 +320,7 @@
 					
 				</ul>
 		
-				<h4>UI & DOM Manipulation</h4>
+				<h4>UI &amp; DOM Manipulation</h4>
 				<ul>
 					
 							<li><a href="/documentation/simplecart-update">.update</a></li>
@@ -369,21 +364,20 @@
 		
 	</nav>
 	<div id="main">
-					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &raquo; <span class="last">The Shelf</span></p>
+					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &#xBB; <span class="last">The Shelf</span></p>
 			
 					<h2 class="pageTitle">The Shelf</h2>
 					<p>You can make items be available to your users by simple using class names in your html. For any Item you want to be available to be added to the cart, you make a container with a class name of simpleCart_shelfItem. Then add classes to tags inside of that container that have the general form item_[name of field] and simpleCart will use the value or innerHTML of that tag for the cart. For example, if you wanted to sell a T-shirt with 3 different sizes, you can do this:</p>
 
-<pre class="html">
-<div class="simpleCart_shelfItem">
+<pre class="html"><div class="simpleCart_shelfItem">
     <h2 class="item_name"> Awesome T-shirt </h2>
-<p>    <select class="item_size"><br />
-        </p><option value="Small"> Small </option>
-<p>        </p><option value="Medium"> Medium </option>
-<p>        </p><option value="Large"> Large </option>
-<p>    </select><br />
-    <input type="text" value="1" class="item_Quantity" /><br />
-    <span class="item_price">$35.99</span><br />
+<p>    <select class="item_size">
+        <option value="Small"> Small </option>
+        <option value="Medium"> Medium </option>
+        <option value="Large"> Large </option>
+    </select><br>
+    <input type="text" value="1" class="item_Quantity"><br>
+    <span class="item_price">$35.99</span><br>
 <a class="item_add" href="javascript:;"> Add to Cart </a></p>
 </div>
 </pre>
@@ -392,12 +386,12 @@
 
 <h3>Some notes:</h3>
 <ul>
-<li>You will want to always supply a quantity and price. Although the cart won&#8217;t break if you don&#8217;t, all the quantities and totals are created from it, so the cart will assign a price of $0 if there is none, and a quantity of 1 if no quantity is provided.</li>
+<li>You will want to always supply a quantity and price. Although the cart won&#x2019;t break if you don&#x2019;t, all the quantities and totals are created from it, so the cart will assign a price of $0 if there is none, and a quantity of 1 if no quantity is provided.</li>
 <li>If you are planning on checking out to googleCheckout or paypal, it is a good idea to use a name field</li>
-<li>If you use a link for the add to cart button, its a good idea to set the href to &#8220;javascript:;&#8221;</li>
+<li>If you use a link for the add to cart button, its a good idea to set the href to &#x201C;javascript:;&#x201D;</li>
 </ul>
 
-<p>&nbsp;</p>
+<p>&#xA0;</p>
 			
 			
 			<div id="commentArea">
@@ -408,16 +402,16 @@
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/4d0d55c25bb347dfdb47b8e12099a8af?s=62" />
+																<img src="http://www.gravatar.com/avatar/4d0d55c25bb347dfdb47b8e12099a8af?s=62">
 								<p><em>Jun 07, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>RCNeil</strong>&nbsp; said:
-						        <p><p>I noticed that PayPal automatically assigns an &#8220;Item Number&#8221; to each item if one is not supplied.&nbsp; </p>
+								<strong>RCNeil</strong>&#xA0; said:
+						        <p></p><p>I noticed that PayPal automatically assigns an &#x201C;Item Number&#x201D; to each item if one is not supplied.&#xA0; </p>
 
-<p>I&#8217;ve tried using an &#8220;item_number&#8221; class, and although SimpleCart collects this information, it does not register with PayPal as it does for Item Name and Item Price.&nbsp; It places it under &#8216;Options&#8217; like all of the other custom classes.&nbsp; </p>
+<p>I&#x2019;ve tried using an &#x201C;item_number&#x201D; class, and although SimpleCart collects this information, it does not register with PayPal as it does for Item Name and Item Price.&#xA0; It places it under &#x2018;Options&#x2019; like all of the other custom classes.&#xA0; </p>
 
-<p>Is there a way to have the two properly correlate?</p></p>
+<p>Is there a way to have the two properly correlate?</p><p></p>
 							</div>
 						</li>
 					
@@ -425,22 +419,22 @@
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/eaae1aed3f57a2a63a7dd7b6c7ad0b81?s=62" />
+																<img src="http://www.gravatar.com/avatar/eaae1aed3f57a2a63a7dd7b6c7ad0b81?s=62">
 								<p><em>Jun 30, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Ron</strong>&nbsp; said:
-						        <p><p>Is there a way to add different per atribute?<br />
-For example:<br />
-Drop down Attribute, name &#8220;Size&#8221;:<br />
-Smal $2 off<br />
-Medium $1 extra<br />
+								<strong>Ron</strong>&#xA0; said:
+						        <p></p><p>Is there a way to add different per atribute?<br>
+For example:<br>
+Drop down Attribute, name &#x201C;Size&#x201D;:<br>
+Smal $2 off<br>
+Medium $1 extra<br>
 Large $3 extra.</p>
 
-<p>Or Extra Fetaure:<br />
-Text field to enter the quantity for"Extra Chesse 1 x $1.50&#8221; and the total for the Attibute would be the quantity times the actual price of the attribute?</p>
+<p>Or Extra Fetaure:<br>
+Text field to enter the quantity for&quot;Extra Chesse 1 x $1.50&#x201D; and the total for the Attibute would be the quantity times the actual price of the attribute?</p>
 
-</p>
+<p></p>
 							</div>
 						</li>
 					
@@ -448,18 +442,18 @@ Text field to enter the quantity for"Extra Chesse 1 x $1.50&#8221; and the total
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/02e85f1aa2869d7d9ddb52dcc1aabac4?s=62" />
+																<img src="http://www.gravatar.com/avatar/02e85f1aa2869d7d9ddb52dcc1aabac4?s=62">
 								<p><em>Oct 27, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Arturo</strong>&nbsp; said:
-						        <p><p>hi&#8230; im wondering if is possible to saver for example an ID and quantity of items to some place like PHP to send it to another webpage that is mine <br />
-for instance: <br />
-sells.html to buy.php<br />
-then&#8230; in buy.php remember (in and array or so)<br />
-tha ID and quantity of a product to do a FAKE sell (this is for my school and i am wondering that&#8230; thanks)</p>
+								<strong>Arturo</strong>&#xA0; said:
+						        <p></p><p>hi&#x2026; im wondering if is possible to saver for example an ID and quantity of items to some place like PHP to send it to another webpage that is mine <br>
+for instance: <br>
+sells.html to buy.php<br>
+then&#x2026; in buy.php remember (in and array or so)<br>
+tha ID and quantity of a product to do a FAKE sell (this is for my school and i am wondering that&#x2026; thanks)</p>
 
-<p>gretings&#8230;</p></p>
+<p>gretings&#x2026;</p><p></p>
 							</div>
 						</li>
 					
@@ -474,7 +468,7 @@ tha ID and quantity of a product to do a FAKE sell (this is for my school and i 
 			<h1 class="left"><a href="/">simpleCart(js)</a></h1>
 			<div class="right">
 				<a href="http://github.com/wojodesign/simplecart-js" target="_blank" class="icnGithub">Github</a>
-				&nbsp;&nbsp;
+				&#xA0;&#xA0;
 				<a href="http://twitter.com/simplecartjs" target="_blank" class="icnTwitter">Twitter</a>
 			</div>
 		</footer>
@@ -534,5 +528,5 @@ simpleCart(js) Demo Code.
   <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 <![endif]-->
 
-</body>
-</html>
+
+</body></html>

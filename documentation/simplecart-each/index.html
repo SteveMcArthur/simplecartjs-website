@@ -1,31 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
+<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+	<meta charset="utf-8">
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Javascript Shopping Cart - simpleCart(js) </title>
 	
 	<!--SEO & Social Content-->
-	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<meta property="og:title" content>
+	<meta property="og:description" content>
+	<meta property="og:image" content>
+	<meta name="description" content>
+	<meta name="author" content>
 
 	<!-- Mobile viewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- CSS-->
-	<link rel="stylesheet" href="/assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css" />
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css">
 	
 
 	<!-- All JavaScript at the bottom, except for Modernizr -->
@@ -325,7 +320,7 @@
 					
 				</ul>
 		
-				<h4>UI & DOM Manipulation</h4>
+				<h4>UI &amp; DOM Manipulation</h4>
 				<ul>
 					
 							<li><a href="/documentation/simplecart-update">.update</a></li>
@@ -369,7 +364,7 @@
 		
 	</nav>
 	<div id="main">
-					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &raquo; <span class="last">.each</span></p>
+					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &#xBB; <span class="last">.each</span></p>
 			
 					<h2 class="pageTitle">simpleCart.each( [array ,] callback )</h2>
 					<div class="signatures">
@@ -381,9 +376,8 @@
 </div>
 <p>Iterating through the simpleCart objects:</p>
 
-<pre class="js">
-simpleCart.add({name: "Sticker",price: 1});
-simpleCart.add({name: "Button",price: 1});
+<pre class="js">simpleCart.add({name: &quot;Sticker&quot;,price: 1});
+simpleCart.add({name: &quot;Button&quot;,price: 1});
 
 var items = [];
 
@@ -391,7 +385,7 @@ simpleCart.each(function( item , x ){
     items.push( item.name );
 });
 
-console.log( items );   // [ "Sticker" , "Button" ]
+console.log( items );   // [ &quot;Sticker&quot; , &quot;Button&quot; ]
 
 </pre>
 			
@@ -404,15 +398,15 @@ console.log( items );   // [ "Sticker" , "Button" ]
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/662a1adc23ec748159796b2440261450?s=62" />
+																<img src="http://www.gravatar.com/avatar/662a1adc23ec748159796b2440261450?s=62">
 								<p><em>Jun 28, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Maciej</strong>&nbsp; said:
-						        <p><p>Instead of<br />
-&nbsp;  item.name<br />
-use <br />
-&nbsp; item.get(&#8216;name&#8217;)</p></p>
+								<strong>Maciej</strong>&#xA0; said:
+						        <p></p><p>Instead of<br>
+&#xA0;  item.name<br>
+use <br>
+&#xA0; item.get(&#x2018;name&#x2019;)</p><p></p>
 							</div>
 						</li>
 					
@@ -420,14 +414,14 @@ use <br />
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/662a1adc23ec748159796b2440261450?s=62" />
+																<img src="http://www.gravatar.com/avatar/662a1adc23ec748159796b2440261450?s=62">
 								<p><em>Jun 28, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>Maciej</strong>&nbsp; said:
-						        <p><p>parameter x takes values: 0, 1, 2, ...</p>
+								<strong>Maciej</strong>&#xA0; said:
+						        <p></p><p>parameter x takes values: 0, 1, 2, ...</p>
 
-<p>you can use the third parameter of the function which takes values of IDs: SCI-1, SCI-2, ...</p></p>
+<p>you can use the third parameter of the function which takes values of IDs: SCI-1, SCI-2, ...</p><p></p>
 							</div>
 						</li>
 					
@@ -442,7 +436,7 @@ use <br />
 			<h1 class="left"><a href="/">simpleCart(js)</a></h1>
 			<div class="right">
 				<a href="http://github.com/wojodesign/simplecart-js" target="_blank" class="icnGithub">Github</a>
-				&nbsp;&nbsp;
+				&#xA0;&#xA0;
 				<a href="http://twitter.com/simplecartjs" target="_blank" class="icnTwitter">Twitter</a>
 			</div>
 		</footer>
@@ -502,5 +496,5 @@ simpleCart(js) Demo Code.
   <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 <![endif]-->
 
-</body>
-</html>
+
+</body></html>

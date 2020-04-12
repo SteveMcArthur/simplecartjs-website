@@ -1,31 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
+<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+	<meta charset="utf-8">
 
 	<!-- Use the .htaccess and remove these lines to avoid edge case issues.-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Javascript Shopping Cart - simpleCart(js) </title>
 	
 	<!--SEO & Social Content-->
-	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<meta property="og:title" content>
+	<meta property="og:description" content>
+	<meta property="og:image" content>
+	<meta name="description" content>
+	<meta name="author" content>
 
 	<!-- Mobile viewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- CSS-->
-	<link rel="stylesheet" href="/assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css" />
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery.snippet.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/uniform.dark.css">
 	
 
 	<!-- All JavaScript at the bottom, except for Modernizr -->
@@ -325,7 +320,7 @@
 					
 				</ul>
 		
-				<h4>UI & DOM Manipulation</h4>
+				<h4>UI &amp; DOM Manipulation</h4>
 				<ul>
 					
 							<li><a href="/documentation/simplecart-update">.update</a></li>
@@ -369,24 +364,23 @@
 		
 	</nav>
 	<div id="main">
-					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &raquo; <span class="last">.add</span></p>
+					<p class="breadcrumbs"><a href="/documentation/">Documentation</a> &#xBB; <span class="last">.add</span></p>
 			
 					<h2 class="pageTitle">simpleCart.add( values )</h2>
 					<div class="signatures">
-<p><strong>arguments:</strong><br/>
-<ul><li>values: name/value map of an item to be added to the cart</li></ul>
-</p>
+<p><strong>arguments:</strong><br>
+</p><ul><li>values: name/value map of an item to be added to the cart</li></ul>
+<p></p>
 
-<p><strong>returns:</strong><br/>
-<ul><li>simpleCart.Item object if successfully added</li></ul>
+<p><strong>returns:</strong><br>
+</p><ul><li>simpleCart.Item object if successfully added</li></ul>
 </div>
 <p>Add an item to the cart</p>
 
-<pre class="js">
-simpleCart.add({ 
-    name: "Cool T-Shirt" ,
+<pre class="js">simpleCart.add({ 
+    name: &quot;Cool T-Shirt&quot; ,
     price: 45.99 ,
-    size: "Small" ,
+    size: &quot;Small&quot; ,
     quantity: 3
 });
 </pre>
@@ -406,16 +400,16 @@ simpleCart.add({
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/9a4c20e538eeb8b3c96d70330410cdff?s=62" />
+																<img src="http://www.gravatar.com/avatar/9a4c20e538eeb8b3c96d70330410cdff?s=62">
 								<p><em>Jun 11, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>adelphia</strong>&nbsp; said:
-						        <p><p>I have found this impossible to get working.&nbsp; I&#8217;m not sure what I am doing wrong.</p>
+								<strong>adelphia</strong>&#xA0; said:
+						        <p></p><p>I have found this impossible to get working.&#xA0; I&#x2019;m not sure what I am doing wrong.</p>
 
-<p>I have tried a simple simpleCart.add(&#123;name:&#8220;Goofball&#8221;&#125;) but all I get is an empty item with a value of ZERO (the value I was expecting, but it&#8217;s not giving the item a name.</p>
+<p>I have tried a simple simpleCart.add({name:&#x201C;Goofball&#x201D;}) but all I get is an empty item with a value of ZERO (the value I was expecting, but it&#x2019;s not giving the item a name.</p>
 
-<p>What I have to do is to use the .set(&#8220;name&#8221;,&#8220;Goofball&#8221;) to get the item to be added.</p></p>
+<p>What I have to do is to use the .set(&#x201C;name&#x201D;,&#x201C;Goofball&#x201D;) to get the item to be added.</p><p></p>
 							</div>
 						</li>
 					
@@ -423,24 +417,24 @@ simpleCart.add({
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/9a4c20e538eeb8b3c96d70330410cdff?s=62" />
+																<img src="http://www.gravatar.com/avatar/9a4c20e538eeb8b3c96d70330410cdff?s=62">
 								<p><em>Jun 13, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>adelphia</strong>&nbsp; said:
-						        <p><p>OK.&nbsp; To add a little more detail cause I&#8217;m stumped&#8230;</p>
+								<strong>adelphia</strong>&#xA0; said:
+						        <p></p><p>OK.&#xA0; To add a little more detail cause I&#x2019;m stumped&#x2026;</p>
 
-<p>My code is simple&#8230;</p>
+<p>My code is simple&#x2026;</p>
 
-<p><code><br />
-var itemInfo = (valueCount == 1 ? document.forms[formName][inputName].value.split(&#8221;?&#8221;) : document.forms[formName][inputName][selectedItem].value.split(&#8221;?&#8221;));<br />
-var itemName = itemInfo[0];<br />
-var itemPrice = parseInt(itemInfo[1]).toFixed(2);<br />
-var thisItem = simpleCart.add(&#123;name:itemName,price:itemPrice&#125;);<br />
-</code><br />
+<p><code><br>
+var itemInfo = (valueCount == 1 ? document.forms[formName][inputName].value.split(&#x201D;?&#x201D;) : document.forms[formName][inputName][selectedItem].value.split(&#x201D;?&#x201D;));<br>
+var itemName = itemInfo[0];<br>
+var itemPrice = parseInt(itemInfo[1]).toFixed(2);<br>
+var thisItem = simpleCart.add({name:itemName,price:itemPrice});<br>
+</code><br>
 But all I get added is a nullified item (no name and a zero price.</p>
 
-<p>Any ideas?</p></p>
+<p>Any ideas?</p><p></p>
 							</div>
 						</li>
 					
@@ -448,20 +442,20 @@ But all I get added is a nullified item (no name and a zero price.</p>
 						
 						<li class="comment">
 							<div class="commentAuthor">
-																<img src="http://www.gravatar.com/avatar/9a4c20e538eeb8b3c96d70330410cdff?s=62" />
+																<img src="http://www.gravatar.com/avatar/9a4c20e538eeb8b3c96d70330410cdff?s=62">
 								<p><em>Jun 13, 2012 </em></p>
 															</div>
 							<div class="commentText">
-								<strong>adelphia</strong>&nbsp; said:
-						        <p><p>OK. Sorted.&nbsp; It&#8217;s the documentation again (sorry).&nbsp; Instead of</p>
+								<strong>adelphia</strong>&#xA0; said:
+						        <p></p><p>OK. Sorted.&#xA0; It&#x2019;s the documentation again (sorry).&#xA0; Instead of</p>
 
-<p>var thisItem = simpleCart.add(&#123;name:itemName,price:itemPrice&#125;);</p>
+<p>var thisItem = simpleCart.add({name:itemName,price:itemPrice});</p>
 
-<p>I used&#8230;</p>
+<p>I used&#x2026;</p>
 
-<p>var thisItem = simpleCart.add(&#8220;name=&#8221; + itemName,&#8220;price=&#8221; + itemPrice);</p>
+<p>var thisItem = simpleCart.add(&#x201C;name=&#x201D; + itemName,&#x201C;price=&#x201D; + itemPrice);</p>
 
-<p>Which works without a hitch&#8230;</p></p>
+<p>Which works without a hitch&#x2026;</p><p></p>
 							</div>
 						</li>
 					
@@ -476,7 +470,7 @@ But all I get added is a nullified item (no name and a zero price.</p>
 			<h1 class="left"><a href="/">simpleCart(js)</a></h1>
 			<div class="right">
 				<a href="http://github.com/wojodesign/simplecart-js" target="_blank" class="icnGithub">Github</a>
-				&nbsp;&nbsp;
+				&#xA0;&#xA0;
 				<a href="http://twitter.com/simplecartjs" target="_blank" class="icnTwitter">Twitter</a>
 			</div>
 		</footer>
@@ -536,5 +530,5 @@ simpleCart(js) Demo Code.
   <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 <![endif]-->
 
-</body>
-</html>
+
+</body></html>
